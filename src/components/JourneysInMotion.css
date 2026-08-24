@@ -1,0 +1,126 @@
+.reels { background: var(--panel); }
+
+.reels__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.reel {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+
+.reel video,
+.reel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(25, 13, 7, 0.05) 0%, rgba(25, 13, 7, 0.75) 100%);
+}
+
+.reel__body {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reel__tag {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass-bright);
+}
+
+.reel__body strong {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--parchment);
+}
+
+.reel__mute {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(25, 13, 7, 0.55);
+  color: var(--parchment);
+  border: 1px solid rgba(245, 237, 224, 0.3);
+  backdrop-filter: blur(4px);
+  transition: background 0.25s ease;
+}
+
+.reel__mute:hover { background: rgba(25, 13, 7, 0.8); }
+
+.reels__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.reels__navbtn {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  color: var(--parchment);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.reels__navbtn:hover {
+  border-color: var(--brass);
+  background: var(--brass);
+  color: var(--ink);
+}
+
+.reels__dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reels__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.reels__dot:hover { background: var(--brass-bright); }
+
+.reels__dot.is-active {
+  background: var(--brass-bright);
+  transform: scale(1.3);
+}
+
+@media (max-width: 900px) {
+  .reels__grid { grid-template-columns: 1fr; }
+  .reel { aspect-ratio: 16 / 11; }
+}
