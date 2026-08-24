@@ -49,8 +49,8 @@
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: var(--parchment);
-  border: 1px solid var(--line-strong);
+  color: #fffdf9;
+  border: 1px solid rgba(255, 253, 249, 0.4);
   padding: 4px 9px;
   backdrop-filter: blur(6px);
 }
@@ -60,7 +60,7 @@
   left: 24px;
   right: 24px;
   bottom: 22px;
-  color: var(--parchment);
+  color: #fffdf9;
 }
 
 .dest-card__region {
@@ -68,7 +68,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--brass-bright);
+  color: #e1ad80;
 }
 
 .dest-card__body h3 {
@@ -80,7 +80,7 @@
 
 .dest-card__body p {
   font-size: 13.5px;
-  color: var(--parchment-dim);
+  color: rgba(255, 253, 249, 0.82);
   max-width: 320px;
   margin-bottom: 12px;
   display: -webkit-box;

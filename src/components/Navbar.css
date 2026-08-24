@@ -156,7 +156,7 @@
 .mega {
   display: flex;
   gap: 40px;
-  background: var(--parchment);
+  background: #ffffff;
   border: 1px solid var(--line-on-light-strong);
   padding: 32px;
   min-width: 620px;
@@ -272,7 +272,7 @@
 .simple {
   display: flex;
   gap: 44px;
-  background: var(--parchment);
+  background: #ffffff;
   border: 1px solid var(--line-on-light-strong);
   padding: 28px 32px;
   box-shadow: 0 24px 60px rgba(25, 13, 7, 0.22);
@@ -301,7 +301,7 @@
     font-size: 13.5px;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    background: var(--parchment);
+    background: #ffffff;
     border-top: 1px solid var(--line-on-light);
     max-height: 70vh;
     overflow-y: auto;

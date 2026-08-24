@@ -11,13 +11,25 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  background: var(--ink);
 }
 
-.hero__img img,
-.hero__img video {
+.hero__slide {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__slide { transition: none; }
 }
 
 .hero__scrim {
@@ -38,6 +50,82 @@
   background: linear-gradient(90deg, transparent 0%, var(--brass) 18%, var(--brass-bright) 50%, var(--brass) 82%, transparent 100%);
   z-index: 1;
   opacity: 0.8;
+}
+
+.hero__caption {
+  position: absolute;
+  top: 118px;
+  right: 32px;
+  z-index: 2;
+  text-align: right;
+}
+
+.hero__caption-slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  white-space: nowrap;
+}
+
+.hero__caption-slide.is-active {
+  position: relative;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__caption-slide { transition: none; }
+}
+
+.hero__caption-index {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--brass-bright);
+}
+
+.hero__caption-region {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--parchment);
+}
+
+.hero__caption-text {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--parchment-dim);
+}
+
+.hero__dots {
+  position: absolute;
+  left: 32px;
+  bottom: 40px;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+}
+
+.hero__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(245, 237, 224, 0.35);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.hero__dot:hover { background: var(--brass-bright); }
+
+.hero__dot.is-active {
+  background: var(--brass-bright);
+  transform: scale(1.3);
 }
 
 .hero__content {
@@ -89,4 +177,7 @@
 @media (max-width: 780px) {
   .hero__content { padding-top: 150px; padding-bottom: 80px; }
   .hero__scroll { display: none; }
+  .hero__caption { top: 96px; right: 22px; }
+  .hero__caption-region { font-size: 17px; }
+  .hero__dots { left: 22px; bottom: 26px; }
 }
