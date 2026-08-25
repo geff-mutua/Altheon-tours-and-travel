@@ -1,6 +1,6 @@
 .whatsapp-widget {
   position: fixed;
-  right: 24px;
+  left: 24px;
   bottom: 24px;
   z-index: 90;
   width: 58px;
@@ -40,5 +40,5 @@
 }
 
 @media (max-width: 620px) {
-  .whatsapp-widget { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+  .whatsapp-widget { left: 16px; bottom: 16px; width: 52px; height: 52px; }
 }
