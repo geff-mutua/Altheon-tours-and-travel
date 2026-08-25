@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -74,25 +74,14 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(25, 13, 7, 0.55) 0%, rgba(25, 13, 7, 0.35) 38%, rgba(25, 13, 7, 0.92) 100%),
-    linear-gradient(90deg, rgba(25, 13, 7, 0.75) 0%, rgba(25, 13, 7, 0.15) 55%);
+    linear-gradient(180deg, rgba(5, 21, 16, 0.42) 0%, rgba(5, 21, 16, 0.14) 38%, rgba(5, 21, 16, 0.88) 100%),
+    linear-gradient(90deg, rgba(5, 21, 16, 0.78) 0%, rgba(5, 21, 16, 0.22) 60%);
 }
 
 /* signature: thin brass horizon line dividing sky/earth, evokes a map meridian */
-.hero__horizon {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 58%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, var(--brass) 18%, var(--brass-bright) 50%, var(--brass) 82%, transparent 100%);
-  z-index: 1;
-  opacity: 0.8;
-}
-
 .hero__caption {
   position: absolute;
-  top: 118px;
+  top: 170px;
   right: 32px;
   z-index: 2;
   text-align: right;
@@ -145,7 +134,7 @@
 .hero__dots {
   position: absolute;
   left: 32px;
-  bottom: 40px;
+  bottom: 42px;
   z-index: 2;
   display: flex;
   gap: 10px;
@@ -169,22 +158,26 @@
 .hero__content {
   position: relative;
   z-index: 2;
-  padding-top: 72px;
-  padding-bottom: 72px;
-  max-width: 760px;
+  padding-top: 170px;
+  padding-bottom: 130px;
+  max-width: 900px;
 }
 
 .hero__title {
-  font-size: clamp(48px, 8vw, 96px);
-  line-height: 0.98;
+  font-size: clamp(58px, 8.2vw, 110px);
+  line-height: 0.94;
   font-weight: 500;
-  margin: 22px 0 26px;
+  margin: 24px 0 30px;
+  max-width: 950px;
+  letter-spacing: -0.045em;
 }
+
+.hero__title em { color: var(--brass-bright); font-weight: 500; font-style: normal; }
 
 .hero__sub {
   font-size: 17px;
   color: var(--parchment-dim);
-  max-width: 460px;
+  max-width: 540px;
   margin-bottom: 40px;
 }
 
@@ -212,10 +205,36 @@
 
 .hero__scroll svg { transform: rotate(0deg); }
 
+.hero__assurance {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 34px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 28px;
+  color: rgba(251, 248, 240, 0.78);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.hero__assurance span { display: flex; align-items: center; gap: 8px; }
+.hero__assurance svg { color: var(--brass-bright); }
+
 @media (max-width: 780px) {
-  .hero__content { padding-top: 130px; padding-bottom: 56px; }
+  .hero__content { padding-top: 180px; padding-bottom: 100px; }
   .hero__scroll { display: none; }
   .hero__caption { top: 96px; right: 22px; }
   .hero__caption-region { font-size: 17px; }
   .hero__dots { left: 22px; bottom: 26px; }
+  .hero__caption { display: none; }
+  .hero__assurance { left: auto; right: 22px; transform: none; bottom: 21px; }
+  .hero__assurance span:last-child { display: none; }
+  .hero__title { font-size: clamp(50px, 16vw, 72px); }
+  .hero__sub { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+  .hero__assurance { display: none; }
 }

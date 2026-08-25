@@ -73,6 +73,7 @@
 }
 
 .contact__form input,
+.contact__form select,
 .contact__form textarea {
   background: transparent;
   border: none;
@@ -87,7 +88,10 @@
 .contact__form input::placeholder,
 .contact__form textarea::placeholder { color: rgba(245, 237, 224, 0.35); }
 
+.contact__form select { appearance: none; color-scheme: dark; }
+
 .contact__form input:focus,
+.contact__form select:focus,
 .contact__form textarea:focus {
   outline: none;
   border-color: var(--brass-bright);

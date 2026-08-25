@@ -21,12 +21,12 @@ export default function PlanYourJourney() {
         />
         <div className="plan__scrim" />
         <div className="wrap plan__hero-content">
-          <span className="eyebrow">We're Here To Help</span>
-          <h1>Plan Your Journey</h1>
+          <span className="eyebrow">Your Plans. Our Move.</span>
+          <h1>Send Us Your Request</h1>
           <div className="plan__breadcrumb">
             <Link to="/">Home</Link>
             <span aria-hidden="true">/</span>
-            <span>Plan Your Journey</span>
+            <span>Send a Request</span>
           </div>
         </div>
       </div>
@@ -35,10 +35,10 @@ export default function PlanYourJourney() {
         <div className="wrap">
           <div className="plan__intro">
             <span className="eyebrow">Get In Touch</span>
-            <h2>Tell us about your dream trip</h2>
+            <h2>What can we coordinate for you?</h2>
             <p>
-              Share your travel dreams and we'll craft a bespoke itinerary just
-              for you — usually within two working days.
+              Share your objective, timing, preferences and budget. We will shape
+              the right travel, gathering, event or experience solution.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ export default function PlanYourJourney() {
                   <h3>Message received</h3>
                   <p>
                     Thank you — a trip designer will be in touch shortly to start
-                    shaping your itinerary.
+                    understanding and shaping your request.
                   </p>
                 </div>
               ) : (
@@ -111,8 +111,15 @@ export default function PlanYourJourney() {
                       <input type="tel" name="phone" required placeholder="+254 712 345 678" />
                     </label>
                     <label>
-                      Destination of interest
-                      <input type="text" name="destination" placeholder="Kenya, Peru, Japan…" />
+                      Service needed
+                      <select name="service" defaultValue="">
+                        <option value="" disabled>Select a service</option>
+                        <option>Travel Desk</option>
+                        <option>Corporate Travel</option>
+                        <option>Hybrid Team Gathering</option>
+                        <option>Leisure Experience</option>
+                        <option>Event Coordination</option>
+                      </select>
                     </label>
                   </div>
                   <div className="contact__row">
@@ -126,15 +133,15 @@ export default function PlanYourJourney() {
                     </label>
                   </div>
                   <label>
-                    Tell us about your dream trip
+                    Tell us what you need
                     <textarea
                       name="message"
                       rows={4}
-                      placeholder="Destinations, activities, group size, accommodation preferences — the more you share, the better we can tailor your journey."
+                      placeholder="Objective, destination or venue, group size, budget and the arrangements you would like us to coordinate."
                     />
                   </label>
                   <button type="submit" className="btn btn-solid contact__submit">
-                    Request Free Itinerary <ArrowRight size={14} strokeWidth={1.5} />
+                    Send My Request <ArrowRight size={14} strokeWidth={1.5} />
                   </button>
                   <p className="contact__fine">Secure &amp; confidential — no spam, ever.</p>
                 </>

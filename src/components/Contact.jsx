@@ -14,11 +14,11 @@ export default function Contact() {
     <section id="contact" className="section contact">
       <div className="wrap contact__wrap">
         <div className="contact__info">
-          <span className="eyebrow">Get In Touch</span>
-          <h2>Plan your journey</h2>
+          <span className="eyebrow">Your Plan. Our Move.</span>
+          <h2>Tell us what you need</h2>
           <p>
-            Tell us where you're dreaming of and we'll come back with a first
-            draft itinerary — usually within two working days.
+            A flight, a company gathering, an event or a complete holiday —
+            share the brief and our team will help shape the right solution.
           </p>
 
           <ul className="contact__list">
@@ -76,24 +76,24 @@ export default function Contact() {
               </div>
               <div className="contact__row">
                 <label>
-                  Destination of interest
-                  <input type="text" name="destination" placeholder="Kenya, Peru, Japan…" />
+                  Service or destination
+                  <input type="text" name="destination" placeholder="Flights, retreat, honeymoon, Kenya…" />
                 </label>
                 <label>
-                  Preferred travel dates
+                  Preferred dates
                   <input type="text" name="dates" placeholder="e.g. March 2027" />
                 </label>
               </div>
               <label>
-                Tell us about your dream trip
+                Tell us what you need
                 <textarea
                   name="message"
                   rows={4}
-                  placeholder="Group size, pace, occasions, anything you have in mind…"
+                  placeholder="Objective, number of people, budget, locations and any arrangements you need…"
                 />
               </label>
               <button type="submit" className="btn btn-solid contact__submit">
-                Request Free Itinerary
+                Send My Request
               </button>
               <p className="contact__fine">Secure &amp; confidential — no spam, ever.</p>
             </>

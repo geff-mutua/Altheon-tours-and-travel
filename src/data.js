@@ -89,28 +89,28 @@ export const testimonials = [
 
 export const faqs = [
   {
-    q: "How far in advance should we start planning?",
-    a: "For most journeys, four to six months gives us room to secure the camps, guides, and permits that make a trip distinctive. Himalayan treks and gorilla permits are worth starting nine months out — those allocations are limited and go early.",
+    q: "What can Altheon coordinate for me?",
+    a: "We coordinate flights, accommodation, transfers, itineraries, business travel, meetings, retreats, team gatherings, events and personalised leisure experiences. You can give us one requirement or the complete brief.",
   },
   {
-    q: "Do you build private, tailor-made itineraries only?",
-    a: "Yes. Every Altheon journey is built around one travelling party — never a bus of strangers. We also run a small number of fixed-date small-group departures (six to ten guests) for travellers who'd like company along the way.",
+    q: "Do you work with both companies and individual travellers?",
+    a: "Yes. We serve corporate organisations, SMEs, hybrid and remote companies, NGOs, executives, couples, families, friends and organised groups. Each solution is shaped around the client's objective.",
   },
   {
-    q: "What's included in the price you quote?",
-    a: "Accommodation, private guiding, ground transport, listed activities, and a dedicated trip designer from first call to final night. International flights, visas, and travel insurance are quoted separately so you always see the real cost of the ground experience.",
+    q: "Can you handle urgent or last-minute travel?",
+    a: "Yes. The A&T Travel Desk supports both carefully planned journeys and urgent requests, subject to supplier availability. Share the dates and requirements and we will identify the most practical options.",
   },
   {
-    q: "Can you accommodate families and multi-generational groups?",
-    a: "Regularly. We adjust pacing, room configurations, and activity intensity by age, and can run parallel programming so grandparents and grandchildren each get a version of the trip that suits them.",
+    q: "How does corporate or hybrid-team coordination work?",
+    a: "Your company deals with Altheon as the coordination partner while we bring together the required accommodation, transport, venues, meals, activities and event suppliers. You receive a clear plan instead of managing multiple providers.",
   },
   {
-    q: "What happens if something goes wrong mid-trip?",
-    a: "Every traveller has a direct line to a trip designer and our regional operations desk, both reachable around the clock while you're on the ground. Most adjustments — a missed connection, a change in weather — are resolved before you'd even think to worry.",
+    q: "Are leisure experiences standard packages?",
+    a: "No. Couples' getaways, honeymoons, family holidays and group experiences are personalised. Where suitable, we can include activities, special dinners, adventures, wellness moments and other experiences that help people connect.",
   },
   {
-    q: "How does Altheon think about sustainability?",
-    a: "We work with camps and operators that employ locally and reinvest in the land they sit on, and we cap group sizes to limit our footprint on fragile routes. A portion of every booking supports the conservancies and community trusts we travel through.",
+    q: "What happens after I send a request?",
+    a: "We clarify your objective, preferences, timing and budget, design the most suitable solution, coordinate the agreed arrangements and provide a clear itinerary. We remain available for support within the agreed scope and follow up afterwards.",
   },
 ];
 

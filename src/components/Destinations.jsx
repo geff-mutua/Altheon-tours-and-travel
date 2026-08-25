@@ -8,12 +8,12 @@ export default function Destinations() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <span className="eyebrow">Where We Go</span>
-            <h2>Six regions, chosen for what they do to people</h2>
+            <span className="eyebrow">Curated Destinations</span>
+            <h2>Places that stay with you</h2>
           </div>
           <p>
-            Every destination on our map is one our own trip designers have
-            travelled — repeatedly, off the standard route.
+            Wild plains, white-sand shores and landscapes that reset your sense
+            of scale — each one known first-hand by our travel designers.
           </p>
         </div>
 

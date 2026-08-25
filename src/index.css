@@ -6,25 +6,25 @@
    ========================================================================== */
 
 :root {
-  --ink: #190d07;
-  --ink-soft: #21120a;
-  --panel: #2b170d;
-  --parchment: #f5ede0;
-  --parchment-dim: #e2d3ba;
-  --brass: #c48f63;
-  --brass-bright: #cea17d;
-  --ember: #b5541f;
-  --sage: #8c7a5e;
+  --ink: #0d211b;
+  --ink-soft: #122b23;
+  --panel: #17372d;
+  --parchment: #fbf8f0;
+  --parchment-dim: #d9ded3;
+  --brass: #c5a46d;
+  --brass-bright: #e1c48f;
+  --ember: #a45f37;
+  --sage: #829087;
   --line: rgba(245, 237, 224, 0.14);
   --line-strong: rgba(245, 237, 224, 0.28);
 
   /* on-light variants — used where a surface flips to a parchment/white
      background (e.g. the nav), where --parchment-dim/--brass fall below
      accessible contrast */
-  --ink-on-light-dim: #6b5238;
-  --accent-on-light: #8f4118;
-  --line-on-light: rgba(25, 13, 7, 0.12);
-  --line-on-light-strong: rgba(25, 13, 7, 0.22);
+  --ink-on-light-dim: #56655f;
+  --accent-on-light: #8a6534;
+  --line-on-light: rgba(13, 33, 27, 0.1);
+  --line-on-light-strong: rgba(13, 33, 27, 0.2);
 
   --font-display: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -34,9 +34,9 @@
 
   /* Light editorial surfaces let the logo's espresso and copper do the
      branding without turning the whole site brown. */
-  --canvas: #faf7f2;
-  --paper: #fffdf9;
-  --sand: #f1e7d8;
+  --canvas: #f6f4ee;
+  --paper: #fcfbf7;
+  --sand: #e9e7dd;
 }
 
 * { box-sizing: border-box; }
@@ -66,7 +66,7 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 500;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.035em;
   margin: 0;
   color: inherit;
 }
@@ -82,13 +82,13 @@ h1, h2, h3, h4 {
 .journal-post__wrap,
 .journal-post__related,
 .plan__body {
-  --parchment: #2f180d;
-  --parchment-dim: #715d4e;
+  --parchment: #0d211b;
+  --parchment-dim: #63736d;
   --panel: #fffdf9;
   --line: rgba(67, 35, 19, 0.11);
   --line-strong: rgba(67, 35, 19, 0.22);
-  --brass: #a86532;
-  --brass-bright: #b8753c;
+  --brass: #9b7945;
+  --brass-bright: #ad8950;
   color: var(--ink);
 }
 
@@ -108,9 +108,9 @@ h1, h2, h3, h4 {
   color: var(--parchment);
 }
 
-.reels { background: #241209; }
-.testi { background: #572b17; }
-.contact { background: #32190f; }
+.reels { background: #10271f; }
+.testi { background: #17372d; }
+.contact { background: #10271f; }
 
 .intro .btn-ghost:hover,
 .destinations .btn-ghost:hover,
@@ -169,7 +169,7 @@ button {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 132px 0;
   position: relative;
 }
 
@@ -186,7 +186,8 @@ button {
   font-size: 12.5px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 16px 28px;
+  padding: 15px 26px;
+  border-radius: 999px;
   border: 1px solid var(--brass);
   color: var(--parchment);
   transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease;
@@ -224,7 +225,8 @@ button {
 }
 
 .section-head h2 {
-  font-size: clamp(30px, 3.6vw, 46px);
+  font-size: clamp(38px, 4.5vw, 60px);
+  line-height: 1.06;
   margin-top: 14px;
   max-width: 620px;
 }

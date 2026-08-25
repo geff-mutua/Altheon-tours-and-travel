@@ -1,85 +1,84 @@
 export const destinationMenu = {
   columns: [
     {
-      heading: "Southern Circuit",
+      heading: "Travel",
       links: [
-        { label: "Maasai Mara", href: "/#destinations" },
-        { label: "Amboseli", href: "/#destinations" },
-        { label: "Tsavo", href: "/#destinations" },
+        { label: "A&T Travel Desk", href: "/#services" },
+        { label: "Flights & Hotels", href: "/#services" },
+        { label: "Transfers & Itineraries", href: "/#services" },
       ],
     },
     {
-      heading: "Rift Valley & North",
+      heading: "Business",
       links: [
-        { label: "Lake Nakuru", href: "/#destinations" },
-        { label: "Samburu", href: "/#destinations" },
+        { label: "A&T Corporate", href: "/#corporate" },
+        { label: "A&T Hybrid", href: "/#corporate" },
+        { label: "A&T Events", href: "/#services" },
       ],
     },
     {
-      heading: "Coast",
-      links: [{ label: "Diani Beach", href: "/#destinations" }],
+      heading: "Leisure",
+      links: [
+        { label: "A&T Experiences", href: "/#experiences" },
+        { label: "Destinations", href: "/#destinations" },
+      ],
     },
   ],
   featured: {
-    label: "Featured",
-    title: "Maasai Mara, Migration Season",
-    img: "https://images.unsplash.com/photo-1547970810-dc1eac37d174?auto=format&fit=crop&w=600&h=760&q=80",
-    href: "/#destinations",
+    label: "Our Promise",
+    title: "You plan. We coordinate. You enjoy.",
+    img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&h=760&q=80",
+    href: "/#process",
   },
 };
 
 export const journeysMenu = {
   columns: [
     {
-      heading: "Wildlife & Desert",
+      heading: "Organisations",
       links: [
-        { label: "Nairobi — Masai Mara", href: "/#destinations" },
-        { label: "Marrakech — Sahara", href: "/#destinations" },
-        { label: "Zanzibar — Stone Town", href: "/#destinations" },
+        { label: "Corporate Organisations", href: "/#corporate" },
+        { label: "SMEs", href: "/#corporate" },
+        { label: "Hybrid & Remote Teams", href: "/#corporate" },
+        { label: "NGOs & Institutions", href: "/#corporate" },
       ],
     },
     {
-      heading: "Trekking & Himalayas",
+      heading: "People & Groups",
       links: [
-        { label: "Cusco — Sacred Valley", href: "/#destinations" },
-        { label: "Paro — Bumthang", href: "/#destinations" },
-        { label: "El Calafate — Torres del Paine", href: "/#destinations" },
-      ],
-    },
-    {
-      heading: "Culture & Landscape",
-      links: [
-        { label: "Kyoto — Takayama", href: "/#destinations" },
-        { label: "Reykjavik — Highlands", href: "/#destinations" },
+        { label: "Executives & Professionals", href: "/#services" },
+        { label: "Couples & Honeymooners", href: "/#experiences" },
+        { label: "Families & Friends", href: "/#experiences" },
+        { label: "Social Groups", href: "/#experiences" },
       ],
     },
   ],
   featured: {
-    label: "Featured Route",
-    title: "Cusco — Sacred Valley",
-    img: "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=600&h=760&q=80",
-    href: "/#destinations",
+    label: "Company Gatherings",
+    title: "Bring your distributed team together",
+    img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&h=760&q=80",
+    href: "/#corporate",
   },
-  viewAll: { label: "View All Journeys", href: "/#destinations" },
+  viewAll: { label: "Start a Conversation", href: "/#contact" },
 };
 
 export const discoverMenu = {
   columns: [
     {
-      heading: "About",
+      heading: "About Altheon",
       links: [
         { label: "Our Philosophy", href: "/#intro" },
-        { label: "Why Travel With Us", href: "/#why" },
-        { label: "Guest Reviews", href: "/#testimonials" },
+        { label: "How We Work", href: "/#process" },
+        { label: "Our Values", href: "/#why" },
         { label: "FAQ", href: "/#faq" },
       ],
     },
     {
-      heading: "Blog & Contact",
+      heading: "Ideas & Contact",
       links: [
         { label: "Blog", href: "/journal" },
-        { label: "Field Notes", href: "/journal" },
-        { label: "Planning Guides", href: "/journal" },
+        { label: "Destinations", href: "/#destinations" },
+        { label: "Plan Your Journey", href: "/plan-your-journey" },
         { label: "Contact Us", href: "/#contact" },
       ],
     },

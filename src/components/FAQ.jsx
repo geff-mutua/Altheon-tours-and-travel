@@ -10,9 +10,9 @@ export default function FAQ() {
     <section id="faq" className="section faq">
       <div className="wrap faq__wrap">
         <div className="faq__head">
-          <span className="eyebrow">Have Questions?</span>
+          <span className="eyebrow">Before We Begin</span>
           <h2>Frequently asked</h2>
-          <p>Everything travellers ask us before their first call.</p>
+          <p>What to know before handing Altheon your travel, gathering or experience brief.</p>
         </div>
 
         <div className="faq__list">

@@ -11,8 +11,8 @@ export default function Footer() {
             <img src="/logo-mark.png" alt="Altheon" className="nav__logo" />
           </div>
           <p>
-            Crafting private, tailor-made journeys across six continents since
-            2007. Let's build yours.
+            Travel, events and experiences coordinated around your plans. Share
+            the brief and leave the details to us.
           </p>
           <div className="footer__social">
             <a href="#" aria-label="Instagram"><Instagram size={17} strokeWidth={1.5} /></a>
@@ -23,25 +23,25 @@ export default function Footer() {
 
         <div className="footer__col">
           <h4>Quick Links</h4>
-          <Link to="/#destinations">Journeys</Link>
-          <Link to="/#destinations">Destinations</Link>
-          <Link to="/#why">About Us</Link>
+          <Link to="/#services">Services</Link>
+          <Link to="/#corporate">Corporate &amp; Hybrid</Link>
+          <Link to="/#process">How It Works</Link>
           <Link to="/journal">Blog</Link>
           <Link to="/#faq">FAQ</Link>
         </div>
 
         <div className="footer__col">
-          <h4>Destinations</h4>
-          <Link to="/#destinations">Kenya</Link>
-          <Link to="/#destinations">Peru</Link>
-          <Link to="/#destinations">Japan</Link>
-          <Link to="/#destinations">Morocco</Link>
-          <Link to="/#destinations">Iceland</Link>
+          <h4>Solutions</h4>
+          <Link to="/#services">Travel Desk</Link>
+          <Link to="/#services">Corporate</Link>
+          <Link to="/#services">Hybrid Teams</Link>
+          <Link to="/#services">Experiences</Link>
+          <Link to="/#services">Events</Link>
         </div>
 
         <div className="footer__col footer__newsletter">
           <h4>Stay Connected</h4>
-          <p>Exclusive routes, seasonal notes, and travel advisories.</p>
+          <p>Useful travel ideas, planning notes and company updates.</p>
           <form className="footer__form" onSubmit={(e) => e.preventDefault()}>
             <input type="email" placeholder="Your email" required />
             <button type="submit" className="btn btn-solid">Join</button>

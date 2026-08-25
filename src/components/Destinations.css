@@ -5,7 +5,7 @@
     "a a b c"
     "a a d d"
     "e e f f";
-  gap: 18px;
+  gap: 14px;
 }
 
 .dest-grid a:nth-child(1) { grid-area: a; }
@@ -21,9 +21,10 @@
   min-height: 220px;
   display: block;
   background: var(--panel);
+  border-radius: 2px;
 }
 
-.dest-card--large { min-height: 300px; }
+.dest-card--large { min-height: 420px; }
 
 .dest-card img {
   position: absolute;
@@ -39,7 +40,7 @@
 .dest-card__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(25, 13, 7, 0.05) 30%, rgba(25, 13, 7, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(5, 21, 16, 0.04) 20%, rgba(5, 21, 16, 0.9) 100%);
 }
 
 .dest-card__code {
@@ -72,7 +73,7 @@
 }
 
 .dest-card__body h3 {
-  font-size: 26px;
+  font-size: 32px;
   margin: 6px 0 8px;
 }
 

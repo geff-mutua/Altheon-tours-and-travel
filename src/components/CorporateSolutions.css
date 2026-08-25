@@ -1,0 +1,20 @@
+.corporate { display: grid; grid-template-columns: 1fr 1fr; min-height: 900px; background: var(--ink-soft); color: var(--parchment); }
+.corporate__visual { position: relative; min-height: 700px; overflow: hidden; }
+.corporate__visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(5,21,16,.88)); }
+.corporate__visual img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.corporate__visual-copy { position: absolute; z-index: 1; left: 8%; right: 8%; bottom: 7%; display: flex; flex-direction: column; }
+.corporate__visual-copy span { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass-bright); }
+.corporate__visual-copy strong { font-size: clamp(30px, 4vw, 54px); line-height: 1.1; margin-top: 8px; }
+.corporate__content { padding: 100px clamp(40px, 7vw, 110px); }
+.corporate__content h2 { font-size: clamp(40px, 4.5vw, 64px); line-height: 1.04; margin: 20px 0 24px; }
+.corporate__content > p { color: var(--parchment-dim); max-width: 620px; }
+.corporate__benefits { display: flex; flex-wrap: wrap; gap: 12px 22px; margin: 28px 0 42px; }
+.corporate__benefits span { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--parchment-dim); }
+.corporate__benefits svg { color: var(--brass-bright); }
+.corporate__example { border-top: 1px solid var(--line); margin-bottom: 34px; }
+.corporate__example-label { display: block; padding: 18px 0; color: var(--brass-bright); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.corporate__day { display: grid; grid-template-columns: 70px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--line); }
+.corporate__day > span { font-size: 10px; letter-spacing: .1em; color: var(--brass); }
+.corporate__day strong { display: block; font-size: 15px; margin-bottom: 3px; }
+.corporate__day p { font-size: 12px; color: var(--parchment-dim); }
+@media (max-width: 900px) { .corporate { grid-template-columns: 1fr; } .corporate__visual { min-height: 580px; } .corporate__content { padding: 76px 22px; } }

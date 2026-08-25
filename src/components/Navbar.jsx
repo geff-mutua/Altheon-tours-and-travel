@@ -5,8 +5,8 @@ import { destinationMenu, journeysMenu, discoverMenu } from "../nav-data";
 import "./Navbar.css";
 
 const MEGA_MENUS = [
-  { key: "destinations", label: "Destinations", data: destinationMenu, kind: "mega" },
-  { key: "journeys", label: "Journeys", data: journeysMenu, kind: "mega" },
+  { key: "destinations", label: "Services", data: destinationMenu, kind: "mega" },
+  { key: "journeys", label: "Who We Serve", data: journeysMenu, kind: "mega" },
   { key: "discover", label: "Discover", data: discoverMenu, kind: "simple" },
 ];
 
@@ -92,6 +92,7 @@ export default function Navbar() {
       <div className="wrap nav__inner">
         <Link to="/#top" className="nav__brand" aria-label="Altheon — home">
           <img src="/logo-mark.png" alt="Altheon" className="nav__logo" />
+          <span className="nav__wordmark">ALTHEON<small>Tours &amp; Travel</small></span>
         </Link>
 
         <nav className="nav__links" onMouseLeave={scheduleClose}>
@@ -140,7 +141,7 @@ export default function Navbar() {
 
         <div className="nav__cta">
           <Link to="/plan-your-journey" className="btn btn-solid">
-            Plan My Journey
+            Send a Request
           </Link>
         </div>
 
@@ -191,7 +192,7 @@ export default function Navbar() {
             Contact
           </Link>
           <Link to="/plan-your-journey" className="btn btn-solid" onClick={() => setOpen(false)}>
-            Plan My Journey
+            Send a Request
           </Link>
         </div>
       )}

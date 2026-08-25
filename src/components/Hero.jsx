@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowUpRight, MapPin, ShieldCheck } from "lucide-react";
 import "./Hero.css";
 
 const SLIDES = [
   {
     region: "Maasai Mara",
-    caption: "Plains Without End",
+    caption: "The wild, in motion",
+    type: "video",
+    video: "https://assets.mixkit.co/videos/11054/11054-720.mp4",
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Zebra_herd%2C_Maasai_Mara_National_Reserve%2C_Kenya.jpg/1920px-Zebra_herd%2C_Maasai_Mara_National_Reserve%2C_Kenya.jpg",
     alt: "A zebra herd grazing across the open Maasai Mara plains",
   },
@@ -27,38 +29,6 @@ const SLIDES = [
     caption: "Where the Wild North Begins",
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Elephants_crossing_the_Ewaso_Ng%27iro_river_at_Samburu_Park%2C_Kenya.jpg/1920px-Elephants_crossing_the_Ewaso_Ng%27iro_river_at_Samburu_Park%2C_Kenya.jpg",
     alt: "Elephants and a giraffe at the Ewaso Ng'iro river in Samburu",
-  },
-  {
-    region: "Lake Nakuru",
-    caption: "A Flamingo Horizon",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Lake_Nakuru_National_Park_02_-_Lesser_Flamingo_%28Phoeniconaias_minor%29.jpg/1920px-Lake_Nakuru_National_Park_02_-_Lesser_Flamingo_%28Phoeniconaias_minor%29.jpg",
-    alt: "A flamingo taking flight over Lake Nakuru",
-  },
-  {
-    region: "Tsavo",
-    caption: "Kenya's Red-Dust Giants",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Majestic_red_elephant_of_Tsavo_East_%285232098119%29.jpg/1920px-Majestic_red_elephant_of_Tsavo_East_%285232098119%29.jpg",
-    alt: "A red-dust elephant in Tsavo East",
-  },
-  {
-    region: "Nairobi National Park",
-    caption: "Wild, Minutes From The City",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/A_giraffe_with_a_beautiful_background_of_Nairobi_City_Skyline.jpg/1920px-A_giraffe_with_a_beautiful_background_of_Nairobi_City_Skyline.jpg",
-    alt: "A giraffe grazing with the Nairobi city skyline behind it",
-  },
-  {
-    region: "Maasai Mara",
-    caption: "Cape Buffalo, Up Close",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Cape_buffalo_with_yellow-billed_oxpeckers%2C_Maasai_Mara_%2851257220079%29.jpg/1920px-Cape_buffalo_with_yellow-billed_oxpeckers%2C_Maasai_Mara_%2851257220079%29.jpg",
-    alt: "A Cape buffalo with yellow-billed oxpeckers on its back",
-  },
-  {
-    region: "Samburu",
-    caption: "Giraffe at the Waterhole",
-    type: "video",
-    video: "https://assets.mixkit.co/videos/11363/11363-720.mp4",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Elephants_crossing_the_Ewaso_Ng%27iro_river_at_Samburu_Park%2C_Kenya.jpg/1920px-Elephants_crossing_the_Ewaso_Ng%27iro_river_at_Samburu_Park%2C_Kenya.jpg",
-    alt: "A giraffe drinking at a waterhole",
   },
 ];
 
@@ -136,8 +106,6 @@ export default function Hero() {
         <div className="hero__scrim" />
       </div>
 
-      <div className="hero__horizon" />
-
       <div className="hero__caption">
         {SLIDES.map((s, i) => (
           <div key={s.region + s.caption} className={`hero__caption-slide ${i === index ? "is-active" : ""}`}>
@@ -160,24 +128,28 @@ export default function Hero() {
       </div>
 
       <div className="wrap hero__content">
-        <span className="eyebrow">Altheon Tours &amp; Travel</span>
+        <span className="eyebrow">Travel · Events · Experiences</span>
         <h1 className="hero__title">
-          Journeys,
-          <br />
-          Deliberately Made
+          Your plans.
+          <br /><em>Our move.</em>
         </h1>
         <p className="hero__sub">
-          Private, tailor-made expeditions across the world's most extraordinary
-          landscapes — planned by people who've walked every mile first.
+          Tell us what you need. We plan, book and coordinate the details —
+          so you can focus on the journey, the meeting or the moment.
         </p>
         <div className="hero__actions">
           <Link to="/plan-your-journey" className="btn btn-solid">
-            Start Planning
+            Tell Us What You Need <ArrowUpRight size={15} />
           </Link>
           <a href="#destinations" className="btn btn-ghost">
-            View Destinations
+            Explore Our Solutions
           </a>
         </div>
+      </div>
+
+      <div className="hero__assurance">
+        <span><MapPin size={15} /> Kenya-based coordination team</span>
+        <span><ShieldCheck size={15} /> End-to-end travel support</span>
       </div>
 
       <a href="#intro" className="hero__scroll" aria-label="Scroll to next section">

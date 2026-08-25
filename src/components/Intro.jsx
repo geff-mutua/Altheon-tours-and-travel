@@ -5,7 +5,7 @@ export default function Intro() {
     <section id="intro" className="section intro">
       <div className="wrap intro__grid">
         <div className="intro__label">
-          <span className="eyebrow">Our Philosophy</span>
+          <span className="eyebrow">More Than Travel</span>
           <figure className="intro__polaroid">
             <img
               src="https://images.unsplash.com/photo-1502920514313-52581002a659?auto=format&fit=crop&w=400&h=500&q=80"
@@ -17,32 +17,32 @@ export default function Intro() {
         </div>
 
         <h2 className="intro__statement">
-          A good journey isn't found in a brochure. It's built —
+          One trusted partner for every moving part —
           <span className="intro__statement-dim">
             {" "}
-            route by route, guide by guide, around the way you actually want to travel.
+            travel, accommodation, meetings, events and experiences, coordinated around you.
           </span>
         </h2>
 
         <div className="intro__foot">
           <p>
-            Altheon designs private expeditions across six continents, working only
-            with guides, camps, and drivers we've vetted ourselves. No fixed
-            packages, no shared buses — every itinerary starts as a blank map and
-            a long conversation.
+            Altheon is a travel, events and experience-management company built
+            for people and organisations who do not have time to coordinate
+            multiple suppliers. You share the objective; we take ownership of
+            planning, booking, coordination and support.
           </p>
           <div className="intro__stats">
             <div>
-              <strong>19</strong>
-              <span>years designing journeys</span>
+              <strong>01</strong>
+              <span>partner from brief to delivery</span>
             </div>
             <div>
-              <strong>46</strong>
-              <span>countries covered</span>
+              <strong>05</strong>
+              <span>integrated service desks</span>
             </div>
             <div>
-              <strong>100%</strong>
-              <span>private, tailor-made</span>
+              <strong>360°</strong>
+              <span>coordination and support</span>
             </div>
           </div>
         </div>
