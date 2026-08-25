@@ -1,8 +1,9 @@
 .process { background: var(--paper); }
-.process__grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line-strong); border-left: 1px solid var(--line); }
+.process__grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-strong); border-left: 1px solid var(--line); }
+.process__grid article:last-child { grid-column: 3 / 5; }
 .process__grid article { padding: 34px 30px 42px; min-height: 210px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .process__grid article > span { color: var(--brass); font-size: 11px; letter-spacing: .14em; }
 .process__grid h3 { margin: 32px 0 10px; font-size: 19px; }
 .process__grid p { color: var(--parchment-dim); font-size: 13px; max-width: 260px; }
-@media (max-width: 800px) { .process__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 900px) { .process__grid { grid-template-columns: 1fr 1fr; } .process__grid article:last-child { grid-column: auto; } }
 @media (max-width: 520px) { .process__grid { grid-template-columns: 1fr; } }

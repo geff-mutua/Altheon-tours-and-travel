@@ -7,6 +7,9 @@ import Home from "./pages/Home";
 import JournalIndex from "./pages/JournalIndex";
 import JournalPost from "./pages/JournalPost";
 import PlanYourJourney from "./pages/PlanYourJourney";
+import ServicesIndex from "./pages/ServicesIndex";
+import ServiceDetail from "./pages/ServiceDetail";
+import About from "./pages/About";
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -37,6 +40,9 @@ export default function App() {
           <Route path="/journal" element={<JournalIndex />} />
           <Route path="/journal/:slug" element={<JournalPost />} />
           <Route path="/plan-your-journey" element={<PlanYourJourney />} />
+          <Route path="/services" element={<ServicesIndex />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />

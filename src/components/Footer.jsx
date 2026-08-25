@@ -23,7 +23,8 @@ export default function Footer() {
 
         <div className="footer__col">
           <h4>Quick Links</h4>
-          <Link to="/#services">Services</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/about">About Altheon</Link>
           <Link to="/#corporate">Corporate &amp; Hybrid</Link>
           <Link to="/#process">How It Works</Link>
           <Link to="/journal">Blog</Link>
@@ -32,11 +33,11 @@ export default function Footer() {
 
         <div className="footer__col">
           <h4>Solutions</h4>
-          <Link to="/#services">Travel Desk</Link>
-          <Link to="/#services">Corporate</Link>
-          <Link to="/#services">Hybrid Teams</Link>
-          <Link to="/#services">Experiences</Link>
-          <Link to="/#services">Events</Link>
+          <Link to="/services/travel-desk">Travel Desk</Link>
+          <Link to="/services/corporate">Corporate</Link>
+          <Link to="/services/hybrid">Hybrid Teams</Link>
+          <Link to="/services/experiences">Experiences</Link>
+          <Link to="/services/events">Events</Link>
         </div>
 
         <div className="footer__col footer__newsletter">

@@ -3,23 +3,23 @@ export const destinationMenu = {
     {
       heading: "Travel",
       links: [
-        { label: "A&T Travel Desk", href: "/#services" },
-        { label: "Flights & Hotels", href: "/#services" },
-        { label: "Transfers & Itineraries", href: "/#services" },
+        { label: "A&T Travel Desk", href: "/services/travel-desk" },
+        { label: "Flights & Hotels", href: "/services/travel-desk" },
+        { label: "Transfers & Itineraries", href: "/services/travel-desk" },
       ],
     },
     {
       heading: "Business",
       links: [
-        { label: "A&T Corporate", href: "/#corporate" },
-        { label: "A&T Hybrid", href: "/#corporate" },
-        { label: "A&T Events", href: "/#services" },
+        { label: "A&T Corporate", href: "/services/corporate" },
+        { label: "A&T Hybrid", href: "/services/hybrid" },
+        { label: "A&T Events", href: "/services/events" },
       ],
     },
     {
       heading: "Leisure",
       links: [
-        { label: "A&T Experiences", href: "/#experiences" },
+        { label: "A&T Experiences", href: "/services/experiences" },
         { label: "Destinations", href: "/#destinations" },
       ],
     },
@@ -28,8 +28,9 @@ export const destinationMenu = {
     label: "Our Promise",
     title: "You plan. We coordinate. You enjoy.",
     img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&h=760&q=80",
-    href: "/#process",
+    href: "/services",
   },
+  viewAll: { label: "View All Services", href: "/services" },
 };
 
 export const journeysMenu = {
@@ -37,19 +38,19 @@ export const journeysMenu = {
     {
       heading: "Organisations",
       links: [
-        { label: "Corporate Organisations", href: "/#corporate" },
-        { label: "SMEs", href: "/#corporate" },
-        { label: "Hybrid & Remote Teams", href: "/#corporate" },
-        { label: "NGOs & Institutions", href: "/#corporate" },
+        { label: "Corporate Organisations", href: "/services/corporate" },
+        { label: "SMEs", href: "/services/corporate" },
+        { label: "Hybrid & Remote Teams", href: "/services/hybrid" },
+        { label: "NGOs & Institutions", href: "/services/events" },
       ],
     },
     {
       heading: "People & Groups",
       links: [
-        { label: "Executives & Professionals", href: "/#services" },
-        { label: "Couples & Honeymooners", href: "/#experiences" },
-        { label: "Families & Friends", href: "/#experiences" },
-        { label: "Social Groups", href: "/#experiences" },
+        { label: "Executives & Professionals", href: "/services/travel-desk" },
+        { label: "Couples & Honeymooners", href: "/services/experiences" },
+        { label: "Families & Friends", href: "/services/experiences" },
+        { label: "Social Groups", href: "/services/experiences" },
       ],
     },
   ],
@@ -57,7 +58,7 @@ export const journeysMenu = {
     label: "Company Gatherings",
     title: "Bring your distributed team together",
     img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&h=760&q=80",
-    href: "/#corporate",
+    href: "/services/hybrid",
   },
   viewAll: { label: "Start a Conversation", href: "/#contact" },
 };
@@ -67,9 +68,10 @@ export const discoverMenu = {
     {
       heading: "About Altheon",
       links: [
-        { label: "Our Philosophy", href: "/#intro" },
-        { label: "How We Work", href: "/#process" },
-        { label: "Our Values", href: "/#why" },
+        { label: "Our Company", href: "/about" },
+        { label: "Our Philosophy", href: "/about" },
+        { label: "How We Work", href: "/about" },
+        { label: "Our Values", href: "/about" },
         { label: "FAQ", href: "/#faq" },
       ],
     },

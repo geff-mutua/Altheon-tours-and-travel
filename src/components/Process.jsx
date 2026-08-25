@@ -7,6 +7,7 @@ const STEPS = [
   ["04", "We coordinate it all", "Bookings, transport and arrangements come together."],
   ["05", "You receive clarity", "A clear itinerary and everything you need to know."],
   ["06", "We remain available", "Support continues throughout the agreed scope."],
+  ["07", "We follow up", "Your feedback helps us improve future experiences."],
 ];
 
 export default function Process() {

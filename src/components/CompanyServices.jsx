@@ -5,6 +5,7 @@ import "./CompanyServices.css";
 const SERVICES = [
   {
     code: "A&T 01",
+    slug: "travel-desk",
     icon: Plane,
     title: "Travel Desk",
     text: "Everyday and urgent travel, organised through one responsive desk.",
@@ -12,6 +13,7 @@ const SERVICES = [
   },
   {
     code: "A&T 02",
+    slug: "corporate",
     icon: BriefcaseBusiness,
     title: "Corporate",
     text: "Practical movement and meeting solutions for employees, executives and clients.",
@@ -19,6 +21,7 @@ const SERVICES = [
   },
   {
     code: "A&T 03",
+    slug: "hybrid",
     icon: Laptop2,
     title: "Hybrid",
     text: "Bring distributed teams together without managing a web of suppliers.",
@@ -26,6 +29,7 @@ const SERVICES = [
   },
   {
     code: "A&T 04",
+    slug: "experiences",
     icon: Heart,
     title: "Experiences",
     text: "Personal journeys designed around connection, celebration and memory.",
@@ -33,6 +37,7 @@ const SERVICES = [
   },
   {
     code: "A&T 05",
+    slug: "events",
     icon: CalendarDays,
     title: "Events",
     text: "Purposeful meetings and events with the logistics handled from end to end.",
@@ -53,7 +58,7 @@ export default function CompanyServices() {
         </div>
 
         <div className="services__grid">
-          {SERVICES.map(({ code, icon: Icon, title, text, items }) => (
+          {SERVICES.map(({ code, slug, icon: Icon, title, text, items }) => (
             <article className="service-card" key={title}>
               <div className="service-card__top">
                 <span>{code}</span>
@@ -62,7 +67,7 @@ export default function CompanyServices() {
               <h3>{title}</h3>
               <p>{text}</p>
               <ul>{items.map((item) => <li key={item}>{item}</li>)}</ul>
-              <Link to="/plan-your-journey">Discuss this service <ArrowUpRight size={14} /></Link>
+              <Link to={`/services/${slug}`}>Explore this service <ArrowUpRight size={14} /></Link>
             </article>
           ))}
         </div>
