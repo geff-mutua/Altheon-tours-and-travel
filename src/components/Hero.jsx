@@ -1,9 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowDown } from "lucide-react";
 import "./Hero.css";
 
 const SLIDES = [
+  {
+    region: "Maasai Mara",
+    caption: "Plains Without End",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Zebra_herd%2C_Maasai_Mara_National_Reserve%2C_Kenya.jpg/1920px-Zebra_herd%2C_Maasai_Mara_National_Reserve%2C_Kenya.jpg",
+    alt: "A zebra herd grazing across the open Maasai Mara plains",
+  },
   {
     region: "Maasai Mara",
     caption: "The Great Migration",
@@ -34,38 +40,99 @@ const SLIDES = [
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Majestic_red_elephant_of_Tsavo_East_%285232098119%29.jpg/1920px-Majestic_red_elephant_of_Tsavo_East_%285232098119%29.jpg",
     alt: "A red-dust elephant in Tsavo East",
   },
+  {
+    region: "Nairobi National Park",
+    caption: "Wild, Minutes From The City",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/A_giraffe_with_a_beautiful_background_of_Nairobi_City_Skyline.jpg/1920px-A_giraffe_with_a_beautiful_background_of_Nairobi_City_Skyline.jpg",
+    alt: "A giraffe grazing with the Nairobi city skyline behind it",
+  },
+  {
+    region: "Maasai Mara",
+    caption: "Cape Buffalo, Up Close",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Cape_buffalo_with_yellow-billed_oxpeckers%2C_Maasai_Mara_%2851257220079%29.jpg/1920px-Cape_buffalo_with_yellow-billed_oxpeckers%2C_Maasai_Mara_%2851257220079%29.jpg",
+    alt: "A Cape buffalo with yellow-billed oxpeckers on its back",
+  },
+  {
+    region: "Samburu",
+    caption: "Giraffe at the Waterhole",
+    type: "video",
+    video: "https://assets.mixkit.co/videos/11363/11363-720.mp4",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Elephants_crossing_the_Ewaso_Ng%27iro_river_at_Samburu_Park%2C_Kenya.jpg/1920px-Elephants_crossing_the_Ewaso_Ng%27iro_river_at_Samburu_Park%2C_Kenya.jpg",
+    alt: "A giraffe drinking at a waterhole",
+  },
 ];
 
 const SLIDE_MS = 5500;
+const EFFECTS = ["fade", "slide", "falling", "slice", "zoom"];
+
+function randomEffect() {
+  return EFFECTS[Math.floor(Math.random() * EFFECTS.length)];
+}
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
+  const [effect, setEffect] = useState(EFFECTS[0]);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const timerRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     setReducedMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   }, []);
 
   useEffect(() => {
+    const isVideoSlide = SLIDES[index]?.type === "video";
+    if (isVideoSlide && !reducedMotion) {
+      videoRef.current?.play?.().catch(() => {});
+    } else {
+      videoRef.current?.pause?.();
+    }
+  }, [index, reducedMotion]);
+
+  const goTo = (next) => {
+    setEffect(randomEffect());
+    setIndex(next);
+  };
+
+  useEffect(() => {
     if (reducedMotion) return;
-    const id = setInterval(() => {
+    timerRef.current = setInterval(() => {
+      setEffect(randomEffect());
       setIndex((v) => (v + 1) % SLIDES.length);
     }, SLIDE_MS);
-    return () => clearInterval(id);
-  }, [reducedMotion]);
+    return () => clearInterval(timerRef.current);
+    // restarting the interval on every manual `goTo` keeps the auto-advance
+    // from firing right on top of a click
+  }, [reducedMotion, index]);
 
   return (
     <section id="top" className="hero">
-      <div className="hero__img">
-        {SLIDES.map((s, i) => (
-          <img
-            key={s.region + s.caption}
-            src={s.img}
-            alt={s.alt}
-            className={`hero__slide ${i === index ? "is-active" : ""}`}
-            loading={i === 0 ? "eager" : "lazy"}
-          />
-        ))}
+      <div className={`hero__img hero__img--${effect}`}>
+        {SLIDES.map((s, i) =>
+          s.type === "video" && !reducedMotion ? (
+            <video
+              key={s.region + s.caption}
+              ref={videoRef}
+              muted
+              loop
+              playsInline
+              preload="none"
+              poster={s.img}
+              aria-label={s.alt}
+              className={`hero__slide ${i === index ? "is-active" : ""}`}
+            >
+              <source src={s.video} type="video/mp4" />
+            </video>
+          ) : (
+            <img
+              key={s.region + s.caption}
+              src={s.img}
+              alt={s.alt}
+              className={`hero__slide ${i === index ? "is-active" : ""}`}
+              loading={i === 0 ? "eager" : "lazy"}
+            />
+          )
+        )}
         <div className="hero__scrim" />
       </div>
 
@@ -86,7 +153,7 @@ export default function Hero() {
           <button
             key={s.region + s.caption}
             className={`hero__dot ${i === index ? "is-active" : ""}`}
-            onClick={() => setIndex(i)}
+            onClick={() => goTo(i)}
             aria-label={`Show ${s.region} — ${s.caption}`}
           />
         ))}
