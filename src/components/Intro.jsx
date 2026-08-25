@@ -17,10 +17,10 @@ export default function Intro() {
         </div>
 
         <h2 className="intro__statement">
-          One trusted partner for every moving part —
+          We don't simply sell tickets. We create solutions —
           <span className="intro__statement-dim">
             {" "}
-            travel, accommodation, meetings, events and experiences, coordinated around you.
+            bringing every journey, meeting, event and experience together around what matters to you.
           </span>
         </h2>
 
