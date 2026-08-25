@@ -50,21 +50,21 @@ export default function PlanYourJourney() {
                   <Phone size={17} strokeWidth={1.5} />
                   <div>
                     <span>Call us</span>
-                    <a href="tel:+254722000000">+254 722 000 000</a>
+                    <a href="tel:+254718441414">+254 718 441 414</a>
                   </div>
                 </li>
                 <li>
                   <MessageCircle size={17} strokeWidth={1.5} />
                   <div>
                     <span>WhatsApp</span>
-                    <a href="https://wa.me/254722000000">Chat with a trip designer</a>
+                    <a href="https://wa.me/254718441414">Chat with a trip designer</a>
                   </div>
                 </li>
                 <li>
                   <Mail size={17} strokeWidth={1.5} />
                   <div>
                     <span>Email us</span>
-                    <a href="mailto:journeys@altheontours.com">journeys@altheontours.com</a>
+                    <a href="mailto:altheontours@gmail.com">altheontours@gmail.com</a>
                   </div>
                 </li>
                 <li>

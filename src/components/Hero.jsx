@@ -13,22 +13,22 @@ const SLIDES = [
     alt: "A zebra herd grazing across the open Maasai Mara plains",
   },
   {
-    region: "Maasai Mara",
-    caption: "The Great Migration",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Wildebeest_Jumping_Into_the_Mara_River.jpg/1920px-Wildebeest_Jumping_Into_the_Mara_River.jpg",
-    alt: "Wildebeest jumping into the Mara River during the migration",
+    region: "Diani Beach",
+    caption: "Kenya's Turquoise Coast",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Diani_Beach_Sunrise_Kenya.jpg/1920px-Diani_Beach_Sunrise_Kenya.jpg",
+    alt: "Sunrise over the white sand and turquoise water of Diani Beach on the Kenyan coast",
+  },
+  {
+    region: "Nairobi",
+    caption: "Wheels Up, Worry-Free",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Kenya_Airways_Flight.jpg/1920px-Kenya_Airways_Flight.jpg",
+    alt: "A Kenya Airways aircraft on the tarmac at Jomo Kenyatta International Airport",
   },
   {
     region: "Amboseli",
     caption: "Giants Beneath Kilimanjaro",
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Amboseli_Park_-_Kilimanjaro_elephant.jpg/1920px-Amboseli_Park_-_Kilimanjaro_elephant.jpg",
     alt: "Elephants grazing on the marshland beneath a snow-capped Mount Kilimanjaro",
-  },
-  {
-    region: "Samburu",
-    caption: "Where the Wild North Begins",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Elephants_crossing_the_Ewaso_Ng%27iro_river_at_Samburu_Park%2C_Kenya.jpg/1920px-Elephants_crossing_the_Ewaso_Ng%27iro_river_at_Samburu_Park%2C_Kenya.jpg",
-    alt: "Elephants and a giraffe at the Ewaso Ng'iro river in Samburu",
   },
 ];
 

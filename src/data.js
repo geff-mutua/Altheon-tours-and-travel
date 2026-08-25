@@ -7,7 +7,7 @@ export const destinations = [
     name: "Maasai Mara",
     region: "Narok County",
     blurb: "Migration plains, Rift Valley light, and camps that put you in the middle of it.",
-    img: unsplash("1547970810-dc1eac37d174", "auto=format&fit=crop&w=1200&h=1500&q=80"),
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Acacia_tree_at_sunset%2C_Maasai_Mara%2C_Kenya.jpg/1920px-Acacia_tree_at_sunset%2C_Maasai_Mara%2C_Kenya.jpg",
     size: "large",
   },
   {

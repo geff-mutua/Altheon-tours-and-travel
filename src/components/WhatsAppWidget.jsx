@@ -1,6 +1,6 @@
 import "./WhatsAppWidget.css";
 
-const WHATSAPP_NUMBER = "254722000000";
+const WHATSAPP_NUMBER = "254718441414";
 const MESSAGE = "Hi Altheon, I'd like to start planning a trip.";
 
 export default function WhatsAppWidget() {

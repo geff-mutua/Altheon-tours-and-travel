@@ -74,11 +74,11 @@ export default function Navbar() {
       <div className="nav__utility">
         <div className="wrap nav__utility-inner">
           <div className="nav__utility-left">
-            <a href="tel:+254722000000">
-              <Phone size={12} strokeWidth={1.5} /> +254 722 000 000
+            <a href="tel:+254718441414">
+              <Phone size={12} strokeWidth={1.5} /> +254 718 441 414
             </a>
-            <a href="mailto:journeys@altheontours.com">
-              <Mail size={12} strokeWidth={1.5} /> journeys@altheontours.com
+            <a href="mailto:altheontours@gmail.com">
+              <Mail size={12} strokeWidth={1.5} /> altheontours@gmail.com
             </a>
           </div>
           <div className="nav__utility-social">

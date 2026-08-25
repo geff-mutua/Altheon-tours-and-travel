@@ -8,8 +8,8 @@ export default function Intro() {
           <span className="eyebrow">More Than Travel</span>
           <figure className="intro__polaroid">
             <img
-              src="https://images.unsplash.com/photo-1502920514313-52581002a659?auto=format&fit=crop&w=400&h=500&q=80"
-              alt="Trip designer's compass and route notes"
+              src="https://images.unsplash.com/photo-1653491948587-083ee5654562?auto=format&fit=crop&w=400&h=500&q=80"
+              alt="A brass compass and pencil resting on a leather travel journal"
               loading="lazy"
             />
             <figcaption>Field notes, Nairobi desk</figcaption>
