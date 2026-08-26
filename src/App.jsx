@@ -10,6 +10,8 @@ import PlanYourJourney from "./pages/PlanYourJourney";
 import ServicesIndex from "./pages/ServicesIndex";
 import ServiceDetail from "./pages/ServiceDetail";
 import About from "./pages/About";
+import Analytics from "./components/Analytics";
+import Seo from "./components/Seo";
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -32,6 +34,8 @@ function ScrollManager() {
 export default function App() {
   return (
     <>
+      <Seo />
+      <Analytics />
       <ScrollManager />
       <Navbar />
       <main>

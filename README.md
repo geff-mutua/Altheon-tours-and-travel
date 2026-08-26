@@ -18,6 +18,19 @@ Then open the printed local URL (usually http://localhost:5173).
 
 Build for production with `npm run build` — output goes to `dist/`.
 
+## Search visibility and analytics
+
+Copy `.env.example` to `.env.production` and replace both example values with
+the real production domain and Google Analytics 4 Measurement ID. The site
+then records client-side route changes as page views, publishes route-specific
+titles/descriptions/canonical and social tags, and generates `robots.txt` plus
+`sitemap.xml` during each production build.
+
+After deployment, add the exact production domain to Google Search Console,
+verify ownership, and submit `/sitemap.xml`. Google controls crawl timing and
+rankings, so these technical changes make the site discoverable but cannot
+guarantee an immediate first-page result.
+
 ## Structure
 
 ```
