@@ -33,36 +33,6 @@ export const destinationMenu = {
   viewAll: { label: "View All Services", href: "/services" },
 };
 
-export const journeysMenu = {
-  columns: [
-    {
-      heading: "Organisations",
-      links: [
-        { label: "Corporate Organisations", href: "/services/corporate" },
-        { label: "SMEs", href: "/services/corporate" },
-        { label: "Hybrid & Remote Teams", href: "/services/hybrid" },
-        { label: "NGOs & Institutions", href: "/services/events" },
-      ],
-    },
-    {
-      heading: "People & Groups",
-      links: [
-        { label: "Executives & Professionals", href: "/services/travel-desk" },
-        { label: "Couples & Honeymooners", href: "/services/experiences" },
-        { label: "Families & Friends", href: "/services/experiences" },
-        { label: "Social Groups", href: "/services/experiences" },
-      ],
-    },
-  ],
-  featured: {
-    label: "Company Gatherings",
-    title: "Bring your distributed team together",
-    img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&h=760&q=80",
-    href: "/services/hybrid",
-  },
-  viewAll: { label: "Start a Conversation", href: "/#contact" },
-};
-
 export const discoverMenu = {
   columns: [
     {

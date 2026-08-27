@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail, ChevronDown, ArrowUpRight, Instagram, Facebook, Youtube } from "lucide-react";
-import { destinationMenu, journeysMenu, discoverMenu } from "../nav-data";
+import { destinationMenu, discoverMenu } from "../nav-data";
 import "./Navbar.css";
 
 const MEGA_MENUS = [
   { key: "destinations", label: "Services", data: destinationMenu, kind: "mega" },
-  { key: "journeys", label: "Who We Serve", data: journeysMenu, kind: "mega" },
   { key: "discover", label: "Discover", data: discoverMenu, kind: "simple" },
 ];
 
@@ -134,6 +133,9 @@ export default function Navbar() {
           <Link to="/journal" className="nav__plain">
             Blog
           </Link>
+          <Link to="/about" className="nav__plain">
+            About Us
+          </Link>
           <Link to="/#contact" className="nav__plain">
             Contact
           </Link>
@@ -187,6 +189,9 @@ export default function Navbar() {
           ))}
           <Link to="/journal" onClick={() => setOpen(false)}>
             Blog
+          </Link>
+          <Link to="/about" onClick={() => setOpen(false)}>
+            About Us
           </Link>
           <Link to="/#contact" onClick={() => setOpen(false)}>
             Contact
