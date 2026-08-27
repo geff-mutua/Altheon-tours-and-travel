@@ -13,6 +13,10 @@
   --paper-2: #faf8f2;
   --sand-2: #f0ece0;
 
+  /* exact image overlay used in the company profile document:
+     flat black scrim at alpha 89/255 */
+  --doc-overlay: rgba(0, 0, 0, 0.349);
+
   background: var(--paper-2);
   color: var(--slate);
 }
@@ -56,12 +60,7 @@
 .about-hero__scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(34, 49, 64, 0.28),
-    rgba(34, 49, 64, 0.22) 38%,
-    rgba(34, 49, 64, 0.92)
-  );
+  background: var(--doc-overlay);
 }
 .about-hero__content {
   position: relative;
@@ -245,7 +244,7 @@
 .about-experiences__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(34, 49, 64, 0) 30%, rgba(34, 49, 64, 0.85));
+  background: var(--doc-overlay);
 }
 .about-experiences__body {
   position: absolute;
@@ -365,6 +364,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.about-corporate__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--doc-overlay);
 }
 .about-corporate__content {
   padding: clamp(60px, 8vw, 110px) clamp(40px, 6vw, 90px);
