@@ -167,13 +167,6 @@
   margin: 0;
 }
 .dk-cover .dk-rule { margin: 2.4cqw 0; }
-.dk-cover__foot { position: absolute; left: 6cqw; bottom: 5cqw; }
-.dk-cover__year {
-  font-size: 2.6cqw;
-  font-weight: 700;
-  color: #fff;
-  margin: 0.5cqw 0 0;
-}
 .dk-cover__seal {
   position: absolute;
   right: 6cqw;
@@ -542,8 +535,6 @@
   .dk-cover h1 { font-size: 52px; }
   .dk-cover__sub { font-size: 15px; margin-top: 8px; }
   .dk-cover__tag { font-size: 20px; }
-  .dk-cover__foot { position: static; margin-top: 26px; }
-  .dk-cover__year { font-size: 22px; }
   .dk-cover__seal { position: static; margin-top: 20px; font-size: 11px; }
 
   .dk-welcome__body,

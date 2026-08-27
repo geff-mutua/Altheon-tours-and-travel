@@ -77,10 +77,6 @@ export default function About() {
             <span className="dk-rule" />
             <p className="dk-cover__tag">Travel, thoughtfully curated.</p>
           </div>
-          <div className="dk-cover__foot">
-            <p className="dk-label">Company Profile</p>
-            <p className="dk-cover__year">2026</p>
-          </div>
           <p className="dk-cover__seal">Tembea Kenya the Altheon Way</p>
         </div>
       </section>
