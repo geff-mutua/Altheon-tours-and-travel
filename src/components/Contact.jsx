@@ -1,13 +1,26 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { sendBookingEmail } from "../lib/sendBookingEmail";
 import "./Contact.css";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError(false);
+    try {
+      await sendBookingEmail(e.target);
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Failed to send booking email", err);
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -92,9 +105,15 @@ export default function Contact() {
                   placeholder="Objective, number of people, budget, locations and any arrangements you need…"
                 />
               </label>
-              <button type="submit" className="btn btn-solid contact__submit">
-                Send My Request
+              <button type="submit" className="btn btn-solid contact__submit" disabled={sending}>
+                {sending ? "Sending…" : "Send My Request"}
               </button>
+              {error && (
+                <p className="contact__error">
+                  Something went wrong sending your request — please try again or
+                  email us directly at altheontours@gmail.com.
+                </p>
+              )}
               <p className="contact__fine">Secure &amp; confidential — no spam, ever.</p>
             </>
           )}

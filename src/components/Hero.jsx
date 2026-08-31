@@ -117,12 +117,9 @@ export default function Hero() {
       <div className="hero__content">
         <span className="hero__eyebrow">Travel · Events · Experiences</span>
         <h1 className="hero__title">
-          Your plans. <em>Our move.</em>
+          Tembea Kenya, <em><br />The Altheon way.</em>
         </h1>
-        <p className="hero__sub">
-          Tell us what you need. We plan, book and coordinate every detail — so you can
-          focus on the journey, the meeting or the moment.
-        </p>
+        
 
         <div className="hero__actions">
           <Link to="/plan-your-journey" className="btn btn-solid">

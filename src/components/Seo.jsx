@@ -4,7 +4,7 @@ import { journal } from "../data";
 import { getService } from "../company-profile";
 
 const DEFAULT_DESCRIPTION =
-  "Altheon Tours & Travel coordinates flights, holidays, corporate travel, meetings, events and personalised experiences in Kenya and beyond.";
+  "Altheon Tours & Travel coordinates accommodation, safaris, flights, corporate travel, holidays and group journeys in Kenya and beyond.";
 
 const pages = {
   "/": {
@@ -16,8 +16,8 @@ const pages = {
     description: "Meet Altheon, a Nairobi-based travel, events and experience-management company for corporate and leisure clients.",
   },
   "/services": {
-    title: "Travel, Corporate & Event Services | Altheon Tours & Travel",
-    description: "Explore flight bookings, accommodation, corporate travel, team gatherings, holidays and event coordination from Altheon.",
+    title: "Hotels, Safaris & Travel Services | Altheon Tours & Travel",
+    description: "Explore accommodation, safari, travel desk, corporate, holiday and group travel services from Altheon.",
   },
   "/journal": {
     title: "Kenya Travel Guides & Planning Advice | Altheon Journal",

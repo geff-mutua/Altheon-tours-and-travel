@@ -166,6 +166,20 @@
 
 .nav__cta .btn { color: var(--ink); }
 
+/* "Send a Request" — white pill, gold on hover */
+.nav__cta .btn.btn-solid,
+.nav__mobile .btn.btn-solid {
+  background: #fff;
+  border-color: #fff;
+  color: var(--ink);
+}
+.nav__cta .btn.btn-solid:hover,
+.nav__mobile .btn.btn-solid:hover {
+  background: var(--brass-bright);
+  border-color: var(--brass-bright);
+  color: var(--ink);
+}
+
 .nav__burger {
   display: none;
   color: var(--parchment);

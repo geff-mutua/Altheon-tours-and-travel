@@ -19,7 +19,7 @@ export default function CorporateSolutions() {
         </div>
       </div>
       <div className="corporate__content">
-        <span className="eyebrow">Corporate &amp; Hybrid Teams</span>
+        <span className="eyebrow">Corporate &amp; Group Travel</span>
         <h2>One brief in.<br />A complete gathering out.</h2>
         <p>For SMEs, hybrid companies, NGOs and corporate teams, Altheon coordinates the people, places and suppliers behind productive business travel and memorable company gatherings.</p>
         <div className="corporate__benefits">
@@ -28,7 +28,7 @@ export default function CorporateSolutions() {
           <span><Check size={15} /> Support throughout the agreed scope</span>
         </div>
         <div className="corporate__example">
-          <span className="corporate__example-label">Example · 3-day hybrid-company gathering</span>
+          <span className="corporate__example-label">Example · 3-day company gathering</span>
           {DAYS.map((item) => (
             <div className="corporate__day" key={item.day}>
               <span>{item.day}</span><div><strong>{item.title}</strong><p>{item.detail}</p></div>

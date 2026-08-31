@@ -90,7 +90,7 @@ export const testimonials = [
 export const faqs = [
   {
     q: "What can Altheon coordinate for me?",
-    a: "We coordinate flights, accommodation, transfers, itineraries, business travel, meetings, retreats, team gatherings, events and personalised leisure experiences. You can give us one requirement or the complete brief.",
+    a: "We coordinate hotels and accommodation, safaris and wildlife journeys, everyday travel, corporate travel, holidays and leisure, and organised group travel. You can give us one requirement or the complete brief.",
   },
   {
     q: "Do you work with both companies and individual travellers?",
@@ -101,11 +101,11 @@ export const faqs = [
     a: "Yes. The A&T Travel Desk supports both carefully planned journeys and urgent requests, subject to supplier availability. Share the dates and requirements and we will identify the most practical options.",
   },
   {
-    q: "How does corporate or hybrid-team coordination work?",
-    a: "Your company deals with Altheon as the coordination partner while we bring together the required accommodation, transport, venues, meals, activities and event suppliers. You receive a clear plan instead of managing multiple providers.",
+    q: "How does corporate or group travel coordination work?",
+    a: "Your company or group deals with Altheon as the coordination partner while we bring together the required flights, accommodation, transport, venues, meals and activities. You receive a clear plan instead of managing multiple providers.",
   },
   {
-    q: "Are leisure experiences standard packages?",
+    q: "Are holiday and leisure journeys standard packages?",
     a: "No. Couples' getaways, honeymoons, family holidays and group experiences are personalised. Where suitable, we can include activities, special dinners, adventures, wellness moments and other experiences that help people connect.",
   },
   {

@@ -10,9 +10,9 @@ export default function ServicesIndex() {
         <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1920&q=85" alt="Traveller overlooking a new destination" />
         <div className="service-hero__scrim" />
         <div className="wrap service-hero__content">
-          <span className="eyebrow">Travel · Meetings · Events · Experiences</span>
+          <span className="eyebrow">Stay · Explore · Travel · Connect</span>
           <h1>One partner.<br />Every moving part.</h1>
-          <p>From a single flight to a complete company gathering, Altheon plans, books and coordinates the details through five connected service desks.</p>
+          <p>From the right stay and a wildlife safari to corporate or group movement, Altheon plans, books and coordinates the details through six connected services.</p>
           <Link to="/plan-your-journey" className="btn btn-solid">Send us your brief <ArrowRight size={15} /></Link>
         </div>
       </header>

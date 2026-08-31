@@ -108,6 +108,11 @@
   color: var(--parchment-dim);
 }
 
+.contact__error {
+  font-size: 13px;
+  color: #d9534f;
+}
+
 .contact__success {
   padding: 40px 0;
   text-align: center;

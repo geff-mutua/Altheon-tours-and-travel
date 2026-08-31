@@ -1,50 +1,58 @@
 import "./Intro.css";
 
+const EXPERIENCES = [
+  {
+    name: "Maasai Mara",
+    image: "/safari-park.jpeg",
+    alt: "Travellers viewing elephants with a guide in the Maasai Mara",
+  },
+  {
+    name: "Diani Coast",
+    image: "/tiger.jpeg",
+    alt: "Sunrise over the white sands and turquoise water of Diani Beach",
+  },
+  {
+    name: "Amboseli",
+    image: "/zebras.jpeg",
+    alt: "Elephants beneath Mount Kilimanjaro in Amboseli",
+  },
+  {
+    name: "Mount Kenya",
+    image: "/about/mount-kenya.jpg",
+    alt: "The peaks and mountain landscape of Mount Kenya",
+  },
+  {
+    name: "Nairobi",
+    image: "/giraffe.jpeg",
+    alt: "The Nairobi skyline",
+  },
+  {
+    name: "Kenyan Coast",
+    image: "/about/kenyan-coast-dhows.jpg",
+    alt: "Traditional dhow boats along the Kenyan coast",
+  },
+];
+
 export default function Intro() {
   return (
     <section id="intro" className="section intro">
-      <div className="wrap intro__grid">
-        <div className="intro__label">
-          <span className="eyebrow">More Than Travel</span>
-          <figure className="intro__polaroid">
-            <img
-              src="https://images.unsplash.com/photo-1653491948587-083ee5654562?auto=format&fit=crop&w=900&h=1100&q=85"
-              alt="A brass compass and pencil resting on a leather travel journal"
-              loading="lazy"
-            />
-            <figcaption>Field notes, Nairobi desk</figcaption>
-          </figure>
-        </div>
-
-        <h2 className="intro__statement">
-          We don't simply sell tickets. We create solutions —
-          <span className="intro__statement-dim">
-            {" "}
-            bringing every journey, meeting, event and experience together around what matters to you.
-          </span>
-        </h2>
-
-        <div className="intro__foot">
+      <div className="wrap">
+        <header className="intro__header">
+          <span className="intro__label">Explore Kenya</span>
+          <h2>Curated Journeys, Unforgottable Experiences</h2>
+          <span className="intro__divider" aria-hidden="true" />
           <p>
-            Altheon is a travel, events and experience-management company built
-            for people and organisations who do not have time to coordinate
-            multiple suppliers. You share the objective; we take ownership of
-            planning, booking, coordination and support.
+            Altheon Tours & Travel is a travel, events and experience management company that handles every detail-from planning and booking to coordination. Whether it’s a business trip, corporate event, romantic getaway or group holiday, clients tell us what they need, and we take care of the rest.
           </p>
-          <div className="intro__stats">
-            <div>
-              <strong>01</strong>
-              <span>partner from brief to delivery</span>
-            </div>
-            <div>
-              <strong>05</strong>
-              <span>integrated service desks</span>
-            </div>
-            <div>
-              <strong>360°</strong>
-              <span>coordination and support</span>
-            </div>
-          </div>
+        </header>
+
+        <div className="intro__layout" aria-label="Featured Kenya experiences">
+          {EXPERIENCES.map(({ name, image, alt }) => (
+            <figure className="intro__visual" key={name}>
+              <img src={image} alt={alt} loading="lazy" />
+              <figcaption>{name}</figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>

@@ -1,26 +1,24 @@
 export const destinationMenu = {
   columns: [
     {
+      heading: "Stays & Safaris",
+      links: [
+        { label: "Hotel & Accommodation", href: "/services/hotel-accommodation" },
+        { label: "Safari & Wildlife", href: "/services/safari-wildlife" },
+      ],
+    },
+    {
       heading: "Travel",
       links: [
-        { label: "A&T Travel Desk", href: "/services/travel-desk" },
-        { label: "Flights & Hotels", href: "/services/travel-desk" },
-        { label: "Transfers & Itineraries", href: "/services/travel-desk" },
+        { label: "Travel Desk", href: "/services/travel-desk" },
+        { label: "Group Travel", href: "/services/group-travel" },
       ],
     },
     {
-      heading: "Business",
+      heading: "Business & Leisure",
       links: [
-        { label: "A&T Corporate", href: "/services/corporate" },
-        { label: "A&T Hybrid", href: "/services/hybrid" },
-        { label: "A&T Events", href: "/services/events" },
-      ],
-    },
-    {
-      heading: "Leisure",
-      links: [
-        { label: "A&T Experiences", href: "/services/experiences" },
-        { label: "Destinations", href: "/#destinations" },
+        { label: "Corporate", href: "/services/corporate" },
+        { label: "Holiday & Leisure", href: "/services/holiday-leisure" },
       ],
     },
   ],

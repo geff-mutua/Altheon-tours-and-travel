@@ -1,15 +1,28 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook, Youtube, ArrowRight } from "lucide-react";
+import { sendBookingEmail } from "../lib/sendBookingEmail";
 import "../components/Contact.css";
 import "./PlanYourJourney.css";
 
 export default function PlanYourJourney() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError(false);
+    try {
+      await sendBookingEmail(e.target);
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Failed to send booking email", err);
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -114,11 +127,12 @@ export default function PlanYourJourney() {
                       Service needed
                       <select name="service" defaultValue="">
                         <option value="" disabled>Select a service</option>
+                        <option>Hotel &amp; Accommodation</option>
+                        <option>Safari &amp; Wildlife</option>
                         <option>Travel Desk</option>
-                        <option>Corporate Travel</option>
-                        <option>Hybrid Team Gathering</option>
-                        <option>Leisure Experience</option>
-                        <option>Event Coordination</option>
+                        <option>Corporate</option>
+                        <option>Holiday &amp; Leisure</option>
+                        <option>Group Travel</option>
                       </select>
                     </label>
                   </div>
@@ -140,9 +154,15 @@ export default function PlanYourJourney() {
                       placeholder="Objective, destination or venue, group size, budget and the arrangements you would like us to coordinate."
                     />
                   </label>
-                  <button type="submit" className="btn btn-solid contact__submit">
-                    Send My Request <ArrowRight size={14} strokeWidth={1.5} />
+                  <button type="submit" className="btn btn-solid contact__submit" disabled={sending}>
+                    {sending ? "Sending…" : "Send My Request"} <ArrowRight size={14} strokeWidth={1.5} />
                   </button>
+                  {error && (
+                    <p className="contact__error">
+                      Something went wrong sending your request — please try again or
+                      email us directly at altheontours@gmail.com.
+                    </p>
+                  )}
                   <p className="contact__fine">Secure &amp; confidential — no spam, ever.</p>
                 </>
               )}

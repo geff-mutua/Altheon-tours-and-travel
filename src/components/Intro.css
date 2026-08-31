@@ -1,119 +1,116 @@
-.intro__grid {
-  display: grid;
-  grid-template-columns: minmax(300px, 400px) 1fr;
-  grid-template-rows: auto 1fr;
-  gap: 24px 64px;
+.intro {
+  overflow: hidden;
+  background: var(--canvas);
+}
+
+.intro__header {
+  display: flex;
+  max-width: 720px;
+  margin: 0 auto 54px;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .intro__label {
-  grid-row: 1 / 3;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: inline-flex;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(197, 164, 109, 0.14);
+  color: var(--accent-on-light);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
-.intro__polaroid {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.intro__header h2 {
+  margin-top: 18px;
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.intro__divider {
+  width: 48px;
+  height: 2px;
+  margin: 17px 0 32px;
+  background: var(--accent-on-light);
+}
+
+.intro__header p {
+  max-width: 660px;
+  color: var(--parchment-dim);
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+.intro__layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.intro__visual {
+  position: relative;
+  aspect-ratio: 16 / 10;
   margin: 0;
-  border: 1px solid var(--line-strong);
-  padding: 16px 16px 20px;
-  background: var(--paper);
-  box-shadow: 0 26px 64px rgba(67, 35, 19, 0.14);
-  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  overflow: hidden;
+  background: var(--sand);
 }
 
-.intro__polaroid:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 36px 76px rgba(67, 35, 19, 0.18);
-}
-
-.intro__polaroid img {
+.intro__visual img {
   width: 100%;
-  flex: 1 1 auto;
-  min-height: 380px;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.intro__polaroid:hover img {
+.intro__visual:first-child img {
+  object-position: center 62%;
+}
+
+.intro__visual:hover img {
   transform: scale(1.045);
 }
 
-.intro__polaroid figcaption {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.05em;
-  color: var(--parchment-dim);
-  margin-top: 14px;
-  flex-shrink: 0;
+.intro__visual figcaption {
+  position: absolute;
+  right: 20px;
+  bottom: 17px;
+  left: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-align: center;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9);
+  text-transform: uppercase;
 }
 
 @media (max-width: 900px) {
-  .intro__polaroid { max-width: 340px; }
-  .intro__polaroid img { min-height: 0; aspect-ratio: 4 / 5; }
+  .intro__layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-.intro__statement {
-  grid-column: 2;
-  font-size: clamp(34px, 4.5vw, 62px);
-  line-height: 1.14;
-  font-weight: 400;
-  max-width: 900px;
-}
+@media (max-width: 600px) {
+  .intro__header {
+    margin-bottom: 38px;
+  }
 
-.intro__statement-dim {
-  color: #829087;
-}
+  .intro__divider {
+    margin-bottom: 24px;
+  }
 
-.intro__foot {
-  grid-column: 2;
-  margin-top: 56px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-  border-top: 1px solid var(--line);
-  padding-top: 40px;
-}
+  .intro__layout {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 
-.intro__foot p {
-  color: var(--parchment-dim);
-  font-size: 15.5px;
-  max-width: 420px;
-}
-
-.intro__stats {
-  display: flex;
-  gap: 40px;
-}
-
-.intro__stats div {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.intro__stats strong {
-  font-family: var(--font-display);
-  font-size: 42px;
-  color: var(--accent-on-light);
-  font-weight: 500;
-}
-
-.intro__stats span {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: var(--parchment-dim);
-  max-width: 90px;
-}
-
-@media (max-width: 900px) {
-  .intro__grid { grid-template-columns: 1fr; grid-template-rows: auto; }
-  .intro__label { grid-row: auto; }
-  .intro__statement, .intro__foot { grid-column: 1; }
-  .intro__foot { grid-template-columns: 1fr; gap: 32px; }
-  .intro__stats { flex-wrap: wrap; gap: 28px; }
+  .intro__visual {
+    aspect-ratio: 4 / 3;
+  }
 }

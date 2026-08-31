@@ -67,7 +67,7 @@ export default function JourneysInMotion() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <span className="eyebrow">A&amp;T Experiences</span>
+            <span className="eyebrow">Holiday &amp; Leisure</span>
             <h2>Designed for more<br />than getting away.</h2>
           </div>
           <p>Getaways and group experiences shaped around connection — with considered stays, activities, dinners, adventures and moments that feel personal.</p>
