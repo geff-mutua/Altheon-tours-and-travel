@@ -10,16 +10,22 @@ const STEPS = [
   ["07", "We follow up", "Your feedback helps us improve future experiences."],
 ];
 
-export default function Process() {
+export default function  Process() {
   return (
     <section id="process" className="section process">
       <div className="wrap">
         <div className="section-head">
           <div><span className="eyebrow">How Altheon Works</span><h2>You bring the plan.<br />We make the arrangements.</h2></div>
-          <p>A clear, accountable process from the first conversation to the final follow-up.</p>
+          {/* <p>A clear, accountable process from the first conversation to the final follow-up.</p> */}
         </div>
-        <div className="process__grid">
-          {STEPS.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}
+        <div className="process__layout">
+          <div className="process__grid">
+            {STEPS.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}
+          </div>
+
+          <figure className="process__visual">
+            <img src="/youngafrikanna.jpeg" alt="Altheon trip designer coordinating a client's journey" loading="lazy" />
+          </figure>
         </div>
       </div>
     </section>

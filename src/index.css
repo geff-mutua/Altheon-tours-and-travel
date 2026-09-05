@@ -102,7 +102,6 @@ h1, h2, h3, h4 {
 .hero,
 .reels,
 .testi,
-.contact,
 .footer,
 .journal-post__hero,
 .plan__hero {
@@ -111,7 +110,7 @@ h1, h2, h3, h4 {
 
 .reels { background: #10271f; }
 .testi { background: #17372d; }
-.contact { background: #10271f; }
+.contact { background: var(--paper); color: var(--ink); }
 
 .intro .btn-ghost:hover,
 .destinations .btn-ghost:hover,

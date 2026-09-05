@@ -7,6 +7,7 @@ import Destinations from "../components/Destinations";
 import Process from "../components/Process";
 import WhyUs from "../components/WhyUs";
 import FAQ from "../components/FAQ";
+import Reviews from "../components/Reviews";
 import Contact from "../components/Contact";
 
 export default function Home() {
@@ -15,12 +16,13 @@ export default function Home() {
       <Hero />
       <Intro />
       <CompanyServices />
-      <CorporateSolutions />
-      <JourneysInMotion />
-      <Destinations />
+      {/* <CorporateSolutions /> */}
+      {/* <JourneysInMotion /> */}
+      {/* <Destinations /> */}
       <Process />
-      <WhyUs />
+      {/* <WhyUs /> */}
       <FAQ />
+      <Reviews />
       <Contact />
     </>
   );
