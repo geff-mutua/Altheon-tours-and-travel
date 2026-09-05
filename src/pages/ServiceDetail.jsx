@@ -35,18 +35,53 @@ export default function ServiceDetail() {
       </header>
 
       <section className="section detail-intro">
-        <div className="wrap detail-intro__grid">
-          <div className="detail-intro__copy">
-            <span className="eyebrow">The Solution</span>
-            <h2>{service.outcome}</h2>
-            {service.sections.map((section) => <div className="detail-copy-block" key={section.title}><h3>{section.title}</h3><p>{section.text}</p></div>)}
+        {service.showcase ? (
+          <div className="wrap detail-showcase">
+            <div className="detail-showcase__head">
+              <span className="eyebrow detail-showcase__eyebrow">{service.showcase.eyebrow}</span>
+              <h2>{service.showcase.heading}</h2>
+            </div>
+            <div className="detail-showcase__copy">
+              <p className="detail-showcase__lead">{service.showcase.lead}</p>
+              {service.showcase.notes.map((note) => <p key={note}>{note}</p>)}
+            </div>
           </div>
-          <aside className="detail-includes">
-            <span>What this service includes</span>
-            <ul>{service.services.map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>
-          </aside>
-        </div>
+        ) : (
+          <div className="wrap detail-intro__grid">
+            <div className="detail-intro__copy">
+              <span className="eyebrow">The Solution</span>
+              <h2>{service.outcome}</h2>
+              {service.sections.map((section) => <div className="detail-copy-block" key={section.title}><h3>{section.title}</h3><p>{section.text}</p></div>)}
+            </div>
+            <aside className="detail-includes">
+              <span>What this service includes</span>
+              <ul>{service.services.map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>
+            </aside>
+          </div>
+        )}
       </section>
+
+      {service.gallery && (
+        <section className="section detail-gallery">
+          <div className="wrap">
+            <div className="detail-gallery__head">
+              <div>
+                <span className="eyebrow detail-gallery__eyebrow">{service.gallery.eyebrow}</span>
+                <h2>{service.gallery.heading}<em>{service.gallery.accent}</em></h2>
+              </div>
+              <p>{service.gallery.blurb}</p>
+            </div>
+            <div className="detail-gallery__grid">
+              {service.gallery.images.map((img) => (
+                <figure className={`detail-gallery__item${img.size === "large" ? " detail-gallery__item--large" : ""}`} key={img.src}>
+                  <img src={img.src} alt={img.alt} loading="lazy" />
+                  {img.caption && <figcaption>{img.caption}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {service.example && (
         <section className="section gathering-example">
@@ -59,14 +94,14 @@ export default function ServiceDetail() {
         </section>
       )}
 
-      <section className="section detail-audience">
+      {/* <section className="section detail-audience">
         <div className="wrap detail-audience__grid">
           <div><Users size={28} /><span className="eyebrow">Who This Serves</span><h2>Designed around the people behind the request.</h2></div>
           <ul>{service.audience.map((item) => <li key={item}>{item}</li>)}</ul>
         </div>
         {service.note && <div className="wrap detail-note"><strong>Important note</strong><p>{service.note}</p></div>}
-      </section>
-
+      </section> */}
+{/* 
       <section className="section related-services">
         <div className="wrap">
           <div className="section-head"><div><span className="eyebrow">Similar Services</span><h2>You may also be interested in.</h2></div><Link to="/services" className="btn btn-ghost">View all services</Link></div>
@@ -74,7 +109,7 @@ export default function ServiceDetail() {
             {related.map((item) => <Link to={`/services/${item.slug}`} key={item.slug}><img src={item.cardImage} alt={item.shortName} loading="lazy" /><div><span>{item.eyebrow}</span><h3>{item.name}</h3><strong>Explore <ArrowRight size={13} /></strong></div></Link>)}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="service-cta"><div className="wrap"><span className="eyebrow">Your Plans. Our Move.</span><h2>Ready to hand over the details?</h2><p>Tell us your objective, timing and budget. We will help shape the right solution.</p><Link to="/plan-your-journey" className="btn btn-solid">Send us your brief <ArrowRight size={15} /></Link></div></section>
     </article>

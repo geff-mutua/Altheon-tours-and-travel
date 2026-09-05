@@ -58,7 +58,7 @@ export const services = [
     eyebrow: "Stay well, wherever you go",
     cardDescription: "Comfort, Luxury and Unforgettable stays from check in to check out.",
     intro: "Hotels, lodges, resorts and serviced stays selected around your destination, budget, comfort and reason for travelling.",
-    image: "/rachel.jpeg",
+    image: "/quang-nguyen-vinh.jpeg",
     cardImage: "/rachel.jpeg",
     services: [
       "Domestic and international hotel bookings",
@@ -76,6 +76,33 @@ export const services = [
       { title: "More than finding a room", text: "Share where you are going, who is travelling and what matters most. We identify suitable properties and coordinate the confirmed stay so location, comfort and budget work together." },
       { title: "Connected to the journey", text: "Accommodation works best when it fits the flights, transfers, activities and schedule around it. Altheon keeps those details aligned instead of treating the stay as an isolated booking." },
     ],
+    showcase: {
+      eyebrow: "Choosing Well",
+      heading: "Where you stay changes the journey.",
+      lead: "Accommodation is one of the most important decisions in planning your trip — not simply a question of price, but of atmosphere, location and how you want each day to feel.",
+      notes: [
+        "A lodge offers the solidity and services of a traditional hotel. A tented camp brings you closer to the landscape, with proper beds, en-suite bathrooms and comfort just beyond the canvas.",
+        "This collection reflects properties we know and use often, but it isn't a limit — we can work with virtually any hotel, lodge or camp in Kenya and match each night to your route, budget and preferred level of comfort.",
+      ],
+    },
+    gallery: {
+      eyebrow: "Handpicked Favourites",
+      heading: "Beautiful places.",
+      accent: "Genuine character.",
+      blurb: "From intimate tented camps to landmark lodges and coastal hideaways — a look at the range of places we can arrange for your stay.",
+      images: [
+        { src: "/gallary1.png", alt: "Warmly lit lodge bedroom with garden views", size: "large" },
+        { src: "/gallary2.png", alt: "Twin-bed tented suite with en-suite bathroom", caption: "lake elementaita manor" },
+        { src: "/gallary3.png", alt: "Private timber deck of a tented camp among palm trees", caption: "Mukima Manor" },
+        { src: "/gallary4.png", alt: "Resort pool and loungers beneath palm trees", caption: "elementaita nature pebbles" },
+        { src: "/gallary5.png", alt: "Moon camp", caption: "moon's camp" },
+        { src: "/kibo.png", alt: "Kibo camp", caption: "Kibo camp" },
+        { src: "/maiyan.png", alt: "Maiyan", caption: "Maiyan" },
+        { src: "/lerruat.png", alt: "Lerruat", caption: "Lerruat Log Resort" },
+        { src: "/amboseli.png", alt: "Amboseli", caption: "AA Amboseli" },
+        { src: "/woodsy.png", alt: "Woodsy", caption: "Woodsy Resort" },
+      ],
+    },
   },
   {
     slug: "safari-wildlife",
