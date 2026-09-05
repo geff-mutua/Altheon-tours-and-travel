@@ -1,5 +1,6 @@
 .services { background: #fff }
 .services__head { align-items: center; }
+.services .section-head h2 { font-size: clamp(28px, 3.2vw, 38px); }
 .services__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
 
 .service-card {

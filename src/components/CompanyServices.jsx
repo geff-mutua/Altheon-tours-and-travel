@@ -11,7 +11,7 @@ export default function CompanyServices() {
           <div>
             <span className="eyebrow">What We Coordinate</span>
             <h2>Follow your curiosity.</h2>
-          <p>Choose a service to see everything Altheon can coordinate for your journey, team or event.</p>
+          <p style={{color:'black'}}>Choose a service to see everything Altheon can coordinate for your journey, team or event.</p>
           </div>
         </div>
 

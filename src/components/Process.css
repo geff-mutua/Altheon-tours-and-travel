@@ -1,5 +1,7 @@
 .process { background: var(--paper); }
 
+.process .section-head h2 { font-size: clamp(28px, 3.2vw, 38px); }
+
 .process__layout {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
