@@ -1,7 +1,7 @@
 .footer {
   background: var(--ink);
   border-top: 1px solid var(--line);
-  padding-top: 80px;
+  padding-top: var(--section-spacing);
 }
 
 .footer__top {

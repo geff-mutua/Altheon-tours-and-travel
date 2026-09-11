@@ -12,7 +12,7 @@
 .reviews__head .eyebrow { margin-bottom: 14px; }
 
 .reviews__head h2 {
-  font-size: clamp(30px, 3.4vw, 42px);
+  font-size: var(--font-section-heading);
   position: relative;
   padding-bottom: 20px;
 }
@@ -53,7 +53,7 @@
 }
 
 .review-card h3 {
-  font-size: 19px;
+  font-size: var(--font-card-heading);
   margin-bottom: 10px;
 }
 

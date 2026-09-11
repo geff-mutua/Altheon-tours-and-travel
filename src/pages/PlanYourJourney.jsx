@@ -84,7 +84,7 @@ export default function PlanYourJourney() {
                   <MapPin size={17} strokeWidth={1.5} />
                   <div>
                     <span>Visit us</span>
-                    <a href="#">12 Meridian Court, Nairobi</a>
+                    <a href="#">Repen building,Syokimau</a>
                   </div>
                 </li>
               </ul>

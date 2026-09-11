@@ -1,55 +1,30 @@
 import "./Intro.css";
 
-const EXPERIENCES = [
-  {
-    name: "Maasai Mara",
-    image: "/safari-park.jpeg",
-    alt: "Travellers viewing elephants with a guide in the Maasai Mara",
-  },
-  {
-    name: "Diani Coast",
-    image: "/tiger.jpeg",
-    alt: "Sunrise over the white sands and turquoise water of Diani Beach",
-  },
-  {
-    name: "Amboseli",
-    image: "/zebras.jpeg",
-    alt: "Elephants beneath Mount Kilimanjaro in Amboseli",
-  },
-  {
-    name: "Mount Kenya",
-    image: "/about/mount-kenya.jpg",
-    alt: "The peaks and mountain landscape of Mount Kenya",
-  },
-  {
-    name: "Nairobi",
-    image: "/giraffe.jpeg",
-    alt: "The Nairobi skyline",
-  },
-  {
-    name: "Kenyan Coast",
-    image: "/about/kenyan-coast-dhows.jpg",
-    alt: "Traditional dhow boats along the Kenyan coast",
-  },
+const DESTINATIONS = [
+  { name: "Dubai", image: "dubai.jpg", alt: "Dubai skyline with the Burj Khalifa" },
+  { name: "Masai Mara", image: "masai-mara.jpg", alt: "Two lions drinking at a waterhole in the Masai Mara", wide: true },
+  { name: "Bali", image: "bali.jpg", alt: "A lakeside temple in Bali", position: "center 28%" },
+  { name: "Vietnam", image: "vietnam.jpg", alt: "Scenery in Vietnam" },
+  { name: "Paris", image: "paris.jpg", alt: "The Eiffel Tower beside the River Seine in Paris" },
+  { name: "Turkey", image: "turkey.jpg", alt: "Architecture in Turkey", wide: true },
 ];
 
 export default function Intro() {
   return (
-    <section id="intro" className="section intro">
-      <div className="wrap">
+    <section id="intro" className="section intro" aria-labelledby="intro-title">
+      <div className="wrap intro__wrap">
         <header className="intro__header">
-          <span className="intro__label">Explore Kenya</span>
-          <h2>Curated Journeys, Unforgottable Experiences</h2>
-          <span className="intro__divider" aria-hidden="true" />
-          <p>
-            Altheon Tours & Travel is a travel, events and experience management company that handles every detail-from planning and booking to coordination. Whether it’s a business trip, corporate event, romantic getaway or group holiday, clients tell us what they need, and we take care of the rest.
-          </p>
+          <h2 id="intro-title">Popular Destinations</h2>
         </header>
-
-        <div className="intro__layout" aria-label="Featured Kenya experiences">
-          {EXPERIENCES.map(({ name, image, alt }) => (
-            <figure className="intro__visual" key={name}>
-              <img src={image} alt={alt} loading="lazy" />
+        <div className="intro__layout">
+          {DESTINATIONS.map(({ name, image, alt, wide, position }) => (
+            <figure className={`intro__visual${wide ? " intro__visual--wide" : ""}`} key={name}>
+              <img
+                src={`/destinations/${image}`}
+                alt={alt}
+                loading="lazy"
+                style={position ? { objectPosition: position } : undefined}
+              />
               <figcaption>{name}</figcaption>
             </figure>
           ))}

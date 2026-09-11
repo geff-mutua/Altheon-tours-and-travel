@@ -86,7 +86,7 @@ export default function Contact() {
                 <span className="contact-card__icon"><MapPin size={16} strokeWidth={1.5} /></span>
                 <div>
                   <span>Visit us</span>
-                  <a href="#">12 Meridian Court, Nairobi</a>
+                  <a href="#">Repen building,Syokimau</a>
                 </div>
               </li>
             </ul>

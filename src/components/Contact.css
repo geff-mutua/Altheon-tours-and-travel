@@ -5,7 +5,7 @@
 }
 
 .contact__info h2 {
-  font-size: clamp(30px, 3.6vw, 42px);
+  font-size: var(--font-section-heading);
   margin: 14px 0 16px;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .contact__success h3 {
-  font-size: 24px;
+  font-size: var(--font-card-heading);
   margin-bottom: 12px;
   color: var(--brass-bright);
 }
@@ -144,7 +144,7 @@
 }
 
 .contact-card__head h2 {
-  font-size: clamp(30px, 3.4vw, 42px);
+  font-size: var(--font-section-heading);
   margin: 14px 0 14px;
 }
 
@@ -173,7 +173,7 @@
 }
 
 .contact-card__info h3 {
-  font-size: 22px;
+  font-size: var(--font-card-heading);
   margin-bottom: 8px;
 }
 
@@ -385,7 +385,7 @@
 .contact-card__success { padding: 60px 0; text-align: center; }
 
 .contact-card__success h3 {
-  font-size: 24px;
+  font-size: var(--font-card-heading);
   margin-bottom: 12px;
   color: var(--accent-on-light);
 }

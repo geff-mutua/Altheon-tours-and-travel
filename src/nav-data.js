@@ -47,7 +47,7 @@ export const discoverMenu = {
       heading: "Ideas & Contact",
       links: [
         { label: "Blog", href: "/journal" },
-        { label: "Destinations", href: "/#destinations" },
+        { label: "Destinations", href: "/destinations" },
         { label: "Plan Your Journey", href: "/plan-your-journey" },
         { label: "Contact Us", href: "/#contact" },
       ],

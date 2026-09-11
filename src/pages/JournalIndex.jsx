@@ -1,10 +1,20 @@
 import { useMemo, useState } from "react";
-import { ArrowUpRight, Clock, Search } from "lucide-react";
+import { ArrowUpRight, BookOpen, Clock, LayoutGrid, Search, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { journal } from "../data";
 import "./JournalIndex.css";
 
-const SORTS = ["Newest", "Quick Reads", "Long Reads"];
+const SORTS = [
+  { key: "All Posts", icon: LayoutGrid },
+  { key: "Quick Reads", icon: Zap },
+  { key: "Long Reads", icon: BookOpen },
+];
+
+const TAG_STYLES = {
+  "Editor's Pick": "rose",
+  "Field Notes": "sky",
+  Almanac: "amber",
+};
 
 function readMinutes(readTime) {
   const n = parseInt(readTime, 10);
@@ -13,19 +23,17 @@ function readMinutes(readTime) {
 
 export default function JournalIndex() {
   const [query, setQuery] = useState("");
-  const [tag, setTag] = useState("All");
-  const [sort, setSort] = useState("Newest");
-
-  const tags = useMemo(() => ["All", ...new Set(journal.map((j) => j.tag))], []);
+  const [sort, setSort] = useState("All Posts");
 
   const posts = useMemo(() => {
     let list = journal.filter((j) => {
-      const matchesTag = tag === "All" || j.tag === tag;
-      const matchesQuery =
-        !query ||
-        j.title.toLowerCase().includes(query.toLowerCase()) ||
-        j.excerpt.toLowerCase().includes(query.toLowerCase());
-      return matchesTag && matchesQuery;
+      if (!query) return true;
+      const q = query.toLowerCase();
+      return (
+        j.title.toLowerCase().includes(q) ||
+        j.excerpt.toLowerCase().includes(q) ||
+        j.tag.toLowerCase().includes(q)
+      );
     });
     if (sort === "Quick Reads") {
       list = [...list].sort((a, b) => readMinutes(a.readTime) - readMinutes(b.readTime));
@@ -33,78 +41,68 @@ export default function JournalIndex() {
       list = [...list].sort((a, b) => readMinutes(b.readTime) - readMinutes(a.readTime));
     }
     return list;
-  }, [query, tag, sort]);
+  }, [query, sort]);
 
   return (
     <section className="section journal-index">
       <div className="wrap">
         <div className="journal-index__head">
-          <span className="eyebrow">The Journal</span>
-          <h1>Stories, field notes, and planning guides from the road</h1>
-          <p>Written by the trip designers and guides who live where they work.</p>
+          <h1>The Journal</h1>
+          <p>Stories, field notes and planning guides from the road — written by the trip designers and guides who live where they work.</p>
         </div>
 
         <div className="journal-index__controls">
-          <div className="journal-index__search">
-            <Search size={16} strokeWidth={1.5} />
+          <span className="journal-index__search-label">Search</span>
+          <form className="journal-index__search" onSubmit={(e) => e.preventDefault()}>
             <input
               type="text"
-              placeholder="Search articles…"
+              placeholder="Search posts…"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
+              aria-label="Search articles"
             />
-          </div>
+            <button type="submit">
+              <Search size={15} strokeWidth={1.75} /> Search
+            </button>
+          </form>
 
           <div className="journal-index__tabs">
-            {tags.map((t) => (
+            {SORTS.map(({ key, icon: Icon }) => (
               <button
-                key={t}
-                className={`journal-index__tab ${tag === t ? "is-active" : ""}`}
-                onClick={() => setTag(t)}
+                key={key}
+                className={`journal-index__tab ${sort === key ? "is-active" : ""}`}
+                onClick={() => setSort(key)}
               >
-                {t}
-              </button>
-            ))}
-          </div>
-
-          <div className="journal-index__sorts">
-            {SORTS.map((s) => (
-              <button
-                key={s}
-                className={`journal-index__sort ${sort === s ? "is-active" : ""}`}
-                onClick={() => setSort(s)}
-              >
-                {s}
+                <Icon size={13} strokeWidth={1.75} /> {key}
               </button>
             ))}
           </div>
         </div>
 
+        <div className="journal-index__divider">
+          <span>Explore All Stories</span>
+        </div>
+
         {posts.length === 0 ? (
-          <p className="journal-index__empty">No articles match that search — try a different term or tag.</p>
+          <p className="journal-index__empty">No articles match that search — try a different term.</p>
         ) : (
           <div className="journal-index__grid">
             {posts.map((j) => (
               <Link to={`/journal/${j.slug}`} className="journal-index__card" key={j.slug}>
                 <div className="journal-index__cover">
                   <img src={j.cover} alt={j.title} loading="lazy" />
-                  <div className="journal-index__badges">
-                    <span>
-                      <Clock size={11} strokeWidth={1.75} /> {j.readTime}
-                    </span>
-                    <span>{j.date}</span>
-                  </div>
+                  <span className="journal-index__badge">
+                    <Clock size={11} strokeWidth={1.75} /> {j.readTime}
+                  </span>
                 </div>
                 <div className="journal-index__body">
-                  <span className="journal-index__tagpill">{j.tag}</span>
+                  <span className={`journal-index__tagpill journal-index__tagpill--${TAG_STYLES[j.tag] || "sand"}`}>
+                    {j.tag}
+                  </span>
+                  <span className="journal-index__date">{j.date}</span>
                   <h3>{j.title}</h3>
                   <blockquote>{j.pullQuote}</blockquote>
                   <p>{j.excerpt}</p>
-                  <div className="journal-index__meta">
-                    <span>{j.author}</span>
-                    <span aria-hidden="true">·</span>
-                    <span>{j.authorRole}</span>
-                  </div>
                   <span className="journal-index__readmore">
                     Read more <ArrowUpRight size={14} strokeWidth={1.5} />
                   </span>

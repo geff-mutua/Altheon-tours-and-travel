@@ -5,8 +5,8 @@ import { destinationMenu, discoverMenu } from "../nav-data";
 import "./Navbar.css";
 
 const MEGA_MENUS = [
-  { key: "destinations", label: "Services", data: destinationMenu, kind: "mega" },
-  { key: "discover", label: "Discover", data: discoverMenu, kind: "simple" },
+  { key: "destinations", label: "SERVICES", data: destinationMenu, kind: "mega" },
+  { key: "discover", label: "DISCOVER", data: discoverMenu, kind: "simple" },
 ];
 
 function MegaPanel({ menu }) {
@@ -95,6 +95,9 @@ export default function Navbar() {
         </Link>
 
         <nav className="nav__links" onMouseLeave={scheduleClose}>
+            <Link to="/" className="nav__plain">
+            Home
+          </Link>
           {MEGA_MENUS.map((menu) => (
             <div
               key={menu.key}
@@ -130,6 +133,9 @@ export default function Navbar() {
               )}
             </div>
           ))}
+          <Link to="/destinations" className="nav__plain">
+            Destinations
+          </Link>
           <Link to="/journal" className="nav__plain">
             Blog
           </Link>
@@ -187,6 +193,9 @@ export default function Navbar() {
               )}
             </div>
           ))}
+          <Link to="/destinations" onClick={() => setOpen(false)}>
+            Destinations
+          </Link>
           <Link to="/journal" onClick={() => setOpen(false)}>
             Blog
           </Link>

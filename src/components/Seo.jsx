@@ -19,6 +19,10 @@ const pages = {
     title: "Hotels, Safaris & Travel Services | Altheon Tours & Travel",
     description: "Explore accommodation, safari, travel desk, corporate, holiday and group travel services from Altheon.",
   },
+  "/destinations": {
+    title: "Destinations | Altheon Tours & Travel",
+    description: "Search Altheon's curated Kenyan destinations — Maasai Mara, Amboseli, Samburu, Lake Nakuru, Tsavo and Diani Beach — and start planning your route.",
+  },
   "/journal": {
     title: "Kenya Travel Guides & Planning Advice | Altheon Journal",
     description: "Read practical Kenya travel guides, destination stories and trip-planning advice from the Altheon team.",
@@ -113,7 +117,7 @@ export default function Seo() {
       telephone: "+254718441414",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "12 Meridian Court",
+        streetAddress: "Repen building,Syokimau",
         addressLocality: "Nairobi",
         addressCountry: "KE",
       },

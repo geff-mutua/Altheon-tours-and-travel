@@ -49,8 +49,6 @@
 .plan__breadcrumb a { color: var(--brass-bright); }
 .plan__breadcrumb a:hover { text-decoration: underline; }
 
-.plan__body { padding-top: 88px; }
-
 .plan__body .contact__form {
   --parchment: #f5ede0;
   --parchment-dim: #e2d3ba;
@@ -67,7 +65,7 @@
 }
 
 .plan__intro h2 {
-  font-size: clamp(28px, 3.4vw, 40px);
+  font-size: var(--font-section-heading);
   margin: 14px 0 16px;
 }
 
@@ -93,5 +91,4 @@
 
 @media (max-width: 780px) {
   .plan__hero { height: 38vh; min-height: 300px; }
-  .plan__body { padding-top: 64px; }
 }

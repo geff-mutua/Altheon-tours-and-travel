@@ -31,6 +31,12 @@
   --font-mono: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
   --container: 1240px;
+  --section-spacing: clamp(40px, 5vw, 64px);
+
+  /* Shared subtopic sizes stay stable across viewport widths and routes. */
+  --font-section-heading: 1.75rem;
+  --font-card-heading: 1.125rem;
+  --font-subtopic-text: 1rem;
 
   /* Light editorial surfaces let the logo's espresso and copper do the
      branding without turning the whole site brown. */
@@ -169,12 +175,11 @@ button {
 }
 
 .section {
-  padding: 132px 0;
+  padding: var(--section-spacing) 0;
   position: relative;
 }
 
 @media (max-width: 780px) {
-  .section { padding: 76px 0; }
   .wrap { padding: 0 22px; }
 }
 
@@ -225,7 +230,7 @@ button {
 }
 
 .section-head h2 {
-  font-size: clamp(38px, 4.5vw, 60px);
+  font-size: var(--font-section-heading);
   line-height: 1.06;
   margin-top: 14px;
   max-width: 620px;

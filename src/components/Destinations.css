@@ -73,11 +73,11 @@
 }
 
 .dest-card__body h3 {
-  font-size: 32px;
+  font-size: var(--font-card-heading);
   margin: 6px 0 8px;
 }
 
-.dest-card--small .dest-card__body h3 { font-size: 22px; }
+.dest-card--small .dest-card__body h3 { font-size: var(--font-card-heading); }
 
 .dest-card__body p {
   font-size: 13.5px;

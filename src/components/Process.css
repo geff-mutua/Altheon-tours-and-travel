@@ -1,6 +1,6 @@
 .process { background: var(--paper); }
 
-.process .section-head h2 { font-size: clamp(28px, 3.2vw, 38px); }
+.process .section-head h2 { font-size: var(--font-section-heading); }
 
 .process__layout {
   display: grid;
@@ -33,7 +33,7 @@
   box-shadow: 0 22px 50px rgba(13, 33, 27, 0.1);
 }
 .process__grid article > span { color: var(--brass); font-size: 11px; letter-spacing: .14em; font-weight: 600; }
-.process__grid h3 { margin: 26px 0 10px; font-size: 18px; color: var(--ink); }
+.process__grid h3 { margin: 26px 0 10px; font-size: var(--font-card-heading); color: var(--ink); }
 .process__grid p { color: var(--ink-on-light-dim); font-size: 13px; }
 
 .process__visual {

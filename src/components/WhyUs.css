@@ -33,7 +33,7 @@
 }
 
 .why__card h3 {
-  font-size: 19px;
+  font-size: var(--font-card-heading);
   margin-top: 8px;
 }
 

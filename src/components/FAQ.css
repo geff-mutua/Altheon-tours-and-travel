@@ -5,7 +5,7 @@
 }
 
 .faq__head h2 {
-  font-size: clamp(28px, 3.2vw, 38px);
+  font-size: var(--font-section-heading);
   margin: 14px 0 12px;
 }
 
@@ -28,7 +28,7 @@
   padding: 24px 0;
   text-align: left;
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: var(--font-subtopic-text);
   color: var(--parchment);
 }
 

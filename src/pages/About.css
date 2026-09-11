@@ -83,7 +83,7 @@
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
-  padding: clamp(52px, 6vw, 96px) clamp(22px, 5vw, 78px) clamp(44px, 5vw, 74px);
+  padding: var(--section-spacing) clamp(22px, 5vw, 78px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,7 +105,7 @@
 .dk-eyebrow__n { font-weight: 700; }
 
 .dk-head h2 {
-  font-size: 3cqw;
+  font-size: var(--font-section-heading);
   line-height: 1.12;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -452,7 +452,7 @@
 
 /* ============ PAGE 9 — BACK COVER ============ */
 .dk--back .dk__frame { justify-content: center; }
-.dk-back h2 { font-size: 3.6cqw; font-weight: 700; color: #fff; margin: 1.4cqw 0 0; }
+.dk-back h2 { font-size: var(--font-section-heading); font-weight: 700; color: #fff; margin: 1.4cqw 0 0; }
 .dk-back .dk-rule { margin: 2.4cqw 0; }
 .dk-back__name {
   font-size: 2cqw;
@@ -515,7 +515,7 @@
     z-index: 2;
     max-width: none;
     justify-content: flex-start;
-    padding: 54px 22px 60px;
+    padding: var(--section-spacing) 22px;
   }
   .dk__logo { width: 68px; top: 16px; right: 18px; }
   .dk--split .dk__logo, .dk--back .dk__logo { left: 18px; right: auto; }
@@ -524,7 +524,7 @@
   .dk__bg { position: absolute; }
 
   .dk-eyebrow { font-size: 11px; margin-bottom: 14px; }
-  .dk-head h2 { font-size: 27px; }
+  .dk-head h2 { font-size: var(--font-section-heading); }
   .dk-sub, .dk-label { font-size: 13px; }
   .dk-sub { margin-top: 10px; }
   .dk__frame p { font-size: 14px; }
@@ -583,7 +583,7 @@
   .dk-diff__text { font-size: 12px; }
   .dk-diff__tagline { font-size: 22px; margin-top: 20px; }
 
-  .dk--split .dk__frame { padding: 54px 22px 60px; }
+  .dk--split .dk__frame { padding: var(--section-spacing) 22px; }
   .dk-corp__main { padding: 0; }
   .dk-corp__intro { font-size: 14px; margin-top: 22px; }
   .dk-corp__list { margin-top: 20px; gap: 14px; }
@@ -593,7 +593,7 @@
   .dk-corp__aside img { position: absolute; }
 
   .dk--back { min-height: 560px; }
-  .dk-back h2 { font-size: 30px; }
+  .dk-back h2 { font-size: var(--font-section-heading); }
   .dk-back__name { font-size: 18px; }
   .dk-back__line { font-size: 13px; }
   .dk-back__contacts { gap: 16px; margin-top: 26px; }

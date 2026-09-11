@@ -9,6 +9,7 @@ import JournalPost from "./pages/JournalPost";
 import PlanYourJourney from "./pages/PlanYourJourney";
 import ServicesIndex from "./pages/ServicesIndex";
 import ServiceDetail from "./pages/ServiceDetail";
+import Destinations from "./pages/Destinations";
 import About from "./pages/About";
 import Analytics from "./components/Analytics";
 import Seo from "./components/Seo";
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="/plan-your-journey" element={<PlanYourJourney />} />
           <Route path="/services" element={<ServicesIndex />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/destinations" element={<Destinations />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
