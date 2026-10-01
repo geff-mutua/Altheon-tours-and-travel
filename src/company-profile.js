@@ -206,6 +206,11 @@ export const services = [
       { title: "Made around your time away", text: "A honeymoon, family holiday and weekend escape should not feel interchangeable. We build around the occasion, personalities, pace and experiences you want to share." },
       { title: "More than accommodation", text: "Where appropriate, your journey can include activities, special dinners, adventures, wellness moments and local experiences—coordinated as one complete holiday." },
     ],
+    holidays: [
+      { label: "YOUNG EXPLORERS", title: "Fun & Thrills", text: "Thrills & Fun fit for the Young Explorer. High adrenaline. Students Educational Trips", image: "/holidays/young-explorers.png" },
+      { label: "Birthday Packages", title: "Bountiful Birthday Holidays", text: "Celebrate your Birthday like a Pro with us. Best Destinations, theme, decorations, & activities", image: "/holidays/birthday-packages.jpg" },
+      { label: "Romantic Honeymoons", title: "Epic Anniversaries", text: "Magical Treats for Honeymoons & Anniversaries. Kenya & International Destinations.", image: "/holidays/honeymoon-holidays.jpg" },
+    ],
   },
   {
     slug: "group-travel",

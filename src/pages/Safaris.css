@@ -1,0 +1,73 @@
+.safari-page { background: var(--canvas); }
+
+/* Hero — full-bleed photo with the category title centred, as on the source site */
+.safari-hero { position: relative; min-height: 520px; display: grid; place-items: center; overflow: hidden; color: #fff; text-align: center; }
+.safari-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.safari-hero__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,21,16,.5), rgba(5,21,16,.25) 45%, rgba(5,21,16,.55)); }
+.safari-hero h1 { position: relative; padding: 140px 16px 60px; font-size: clamp(38px, 6vw, 72px); line-height: 1; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
+.safari-hero--tour { min-height: 420px; place-items: end stretch; text-align: left; }
+.safari-hero__tour { position: relative; padding: 150px 0 56px; }
+.safari-hero__tour h1 { padding: 0; max-width: 900px; font-size: clamp(32px, 4.5vw, 56px); line-height: 1.05; }
+
+/* Category grid */
+.safari-list__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.safari-card { position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden; color: #fff; background: var(--panel); }
+.safari-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.16,1,.3,1); }
+.safari-card:hover img { transform: scale(1.06); }
+.safari-card__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,21,16,.45) 0%, rgba(5,21,16,.1) 35%, rgba(5,21,16,.85) 100%); }
+.safari-card__body { position: absolute; left: 22px; right: 22px; bottom: 22px; }
+.safari-card__body h3 { font-size: var(--font-card-heading); line-height: 1.3; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.safari-card__btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 14px; border: 1px solid rgba(255,255,255,.85); font-size: 13px; font-weight: 500; transition: background .3s ease, color .3s ease, border-color .3s ease; }
+.safari-card:hover .safari-card__btn { background: var(--brass-bright); border-color: var(--brass-bright); color: var(--ink); }
+
+/* Tour detail */
+.safari-detail__grid { display: grid; grid-template-columns: 1fr 330px; gap: 56px; align-items: start; }
+.safari-gallery__main { width: 100%; aspect-ratio: 85 / 54; object-fit: cover; display: block; background: var(--sand); }
+.safari-gallery__thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 10px; }
+.safari-gallery__thumbs button { padding: 0; border: 2px solid transparent; cursor: pointer; background: none; aspect-ratio: 85 / 54; overflow: hidden; opacity: .7; transition: opacity .25s ease, border-color .25s ease; }
+.safari-gallery__thumbs button.is-active, .safari-gallery__thumbs button:hover { opacity: 1; border-color: var(--ember); }
+.safari-gallery__thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.safari-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 44px; border-bottom: 1px solid var(--line-on-light-strong); }
+.safari-tabs button { padding: 13px 20px; background: none; border: none; border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer; font: inherit; font-size: 14px; font-weight: 500; color: var(--ink-on-light-dim); transition: color .25s ease, border-color .25s ease; }
+.safari-tabs button.is-active { color: var(--ink); border-color: var(--ember); }
+.safari-tab-panel { padding-top: 30px; color: #3f534b; font-size: 15px; }
+.safari-tab-panel h3 { margin: 26px 0 12px; font-size: var(--font-card-heading); color: var(--ink); letter-spacing: -.01em; }
+.safari-tab-panel h3:first-child { margin-top: 0; }
+.safari-tab-panel p { margin: 0 0 14px; }
+.safari-tab-panel ul { margin: 0 0 18px; padding-left: 20px; }
+.safari-tab-panel li { padding: 3px 0; }
+.safari-table { overflow-x: auto; margin-bottom: 24px; }
+.safari-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.safari-table th, .safari-table td { padding: 12px 14px; border: 1px solid var(--line-on-light-strong); text-align: left; vertical-align: top; }
+.safari-table th { background: var(--sand); color: var(--ink); font-weight: 600; }
+
+.safari-plan__all { display: block; margin: 0 0 14px auto; background: none; border: none; cursor: pointer; font: inherit; font-size: 13px; font-weight: 500; color: var(--accent-on-light); }
+.safari-plan__step { border: 1px solid var(--line-on-light-strong); margin-bottom: 10px; background: var(--paper); }
+.safari-plan__title { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; background: none; border: none; cursor: pointer; font: inherit; font-size: 15px; font-weight: 600; text-align: left; color: var(--ink); }
+.safari-plan__title svg { flex: 0 0 auto; transition: transform .25s ease; }
+.safari-plan__step.is-open .safari-plan__title svg { transform: rotate(180deg); }
+.safari-plan__body { padding: 0 20px 6px; }
+
+.safari-summary { position: sticky; top: 110px; padding: 32px; background: var(--ink-soft); color: var(--parchment); display: flex; flex-direction: column; }
+.safari-summary__row { padding: 14px 0; border-top: 1px solid var(--line); }
+.safari-summary__row:first-child { border-top: none; padding-top: 0; }
+.safari-summary__row span { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--parchment-dim); }
+.safari-summary__row p { margin: 4px 0 0; font-size: 15px; }
+.safari-summary .btn { margin-top: 20px; justify-content: center; }
+
+@media (max-width: 1080px) {
+  .safari-list__grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .safari-list__grid { grid-template-columns: 1fr 1fr; }
+  .safari-detail__grid { grid-template-columns: 1fr; gap: 36px; }
+  .safari-summary { position: static; order: -1; }
+  .safari-hero { min-height: 420px; }
+}
+@media (max-width: 620px) {
+  .safari-list__grid { grid-template-columns: 1fr; }
+  .safari-card { aspect-ratio: 4 / 5; }
+  .safari-gallery__thumbs { grid-template-columns: repeat(3, 1fr); }
+  .safari-tabs button { padding: 11px 12px; font-size: 13px; }
+}

@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail, ChevronDown, ArrowUpRight, Instagram, Facebook, Youtube } from "lucide-react";
-import { destinationMenu, discoverMenu } from "../nav-data";
+import { destinationMenu, discoverMenu, safarisMenu } from "../nav-data";
 import "./Navbar.css";
 
 const MEGA_MENUS = [
   { key: "destinations", label: "SERVICES", data: destinationMenu, kind: "mega" },
+  { key: "safaris", label: "TOURS & SAFARIS", data: safarisMenu, kind: "simple" },
   { key: "discover", label: "DISCOVER", data: discoverMenu, kind: "simple" },
 ];
 
@@ -142,16 +143,7 @@ export default function Navbar() {
           <Link to="/about" className="nav__plain">
             About Us
           </Link>
-          <Link to="/#contact" className="nav__plain">
-            Contact
-          </Link>
         </nav>
-
-        <div className="nav__cta">
-          <Link to="/plan-your-journey" className="btn btn-solid">
-            Send a Request
-          </Link>
-        </div>
 
         <button
           className="nav__burger"
@@ -201,12 +193,6 @@ export default function Navbar() {
           </Link>
           <Link to="/about" onClick={() => setOpen(false)}>
             About Us
-          </Link>
-          <Link to="/#contact" onClick={() => setOpen(false)}>
-            Contact
-          </Link>
-          <Link to="/plan-your-journey" className="btn btn-solid" onClick={() => setOpen(false)}>
-            Send a Request
           </Link>
         </div>
       )}

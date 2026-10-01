@@ -34,6 +34,24 @@ export default function ServiceDetail() {
         </div>
       </header>
 
+      {service.holidays ? (
+        <section className="section holiday-cards">
+          <div className="wrap holiday-cards__grid">
+            {service.holidays.map((card) => (
+              <article className="holiday-card" key={card.title}>
+                <div className="holiday-card__image">
+                  <img src={card.image} alt={card.label} loading="lazy" />
+                  <span>{card.label}</span>
+                </div>
+                <div className="holiday-card__body">
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : (
       <section className="section detail-intro">
         {service.showcase ? (
           <div className="wrap detail-showcase">
@@ -60,6 +78,7 @@ export default function ServiceDetail() {
           </div>
         )}
       </section>
+      )}
 
       {service.gallery && (
         <section className="section detail-gallery">

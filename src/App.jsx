@@ -11,6 +11,8 @@ import ServicesIndex from "./pages/ServicesIndex";
 import ServiceDetail from "./pages/ServiceDetail";
 import Destinations from "./pages/Destinations";
 import About from "./pages/About";
+import SafariCategory from "./pages/SafariCategory";
+import SafariTour from "./pages/SafariTour";
 import Analytics from "./components/Analytics";
 import Seo from "./components/Seo";
 
@@ -49,6 +51,8 @@ export default function App() {
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/about" element={<About />} />
+          <Route path="/safaris/:category" element={<SafariCategory />} />
+          <Route path="/safaris/:category/:slug" element={<SafariTour />} />
         </Routes>
       </main>
       <Footer />

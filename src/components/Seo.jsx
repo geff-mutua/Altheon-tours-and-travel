@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { journal } from "../data";
 import { getService } from "../company-profile";
+import { getSafariCategory, getSafariTour } from "../safaris-data";
 
 const DEFAULT_DESCRIPTION =
   "Altheon Tours & Travel coordinates accommodation, safaris, flights, corporate travel, holidays and group journeys in Kenya and beyond.";
@@ -50,6 +51,22 @@ function getPage(pathname) {
       title: `${service.name} | Altheon Tours & Travel`,
       description: service.intro,
       image: service.image,
+    };
+  }
+
+  const safariMatch = pathname.match(/^\/safaris\/([^/]+)(?:\/([^/]+))?$/);
+  if (safariMatch) {
+    const category = getSafariCategory(safariMatch[1]);
+    const tour = safariMatch[2] && getSafariTour(safariMatch[1], safariMatch[2]);
+    if (tour) return {
+      title: `${tour.title} | Altheon Tours & Travel`,
+      description: tour.overview.find((b) => b.type === "p")?.text || DEFAULT_DESCRIPTION,
+      image: tour.image,
+    };
+    if (category && !safariMatch[2]) return {
+      title: `${category.title} | Altheon Tours & Travel`,
+      description: `Browse Altheon's ${category.name.toLowerCase()} packages — ${category.tours.map((t) => t.title).slice(0, 2).join(", ")} and more.`,
+      image: category.hero,
     };
   }
 

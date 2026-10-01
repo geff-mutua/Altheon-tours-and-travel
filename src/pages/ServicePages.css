@@ -71,6 +71,17 @@
   text-transform: uppercase;
   text-shadow: 0 1px 10px rgba(0, 0, 0, .9);
 }
+.holiday-cards { background: #f6f7fb; }
+.holiday-cards__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.holiday-card { background: #fff; overflow: hidden; }
+.holiday-card__image { position: relative; aspect-ratio: 616 / 390; overflow: hidden; }
+.holiday-card__image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+.holiday-card:hover .holiday-card__image img { transform: scale(1.05); }
+.holiday-card__image::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.18); }
+.holiday-card__image span { position: absolute; z-index: 1; left: 30px; right: 30px; bottom: 26px; color: #fff; font-size: 30px; line-height: 1.1; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
+.holiday-card__body { padding: 28px 30px 32px; }
+.holiday-card__body h3 { font-size: 20px; letter-spacing: -.01em; color: var(--ink); margin-bottom: 8px; }
+.holiday-card__body p { font-size: 14px; color: #55605b; margin: 0; }
 .detail-includes { background: var(--ink-soft); color: var(--parchment); padding: 38px; position: sticky; top: 110px; }
 .detail-includes > span { color: var(--brass-bright); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
 .detail-includes ul { list-style: none; padding: 22px 0 0; margin: 0; }
@@ -108,6 +119,7 @@
   .service-hero { min-height: 640px; }
   .service-overview__grid, .service-promise__grid, .detail-intro__grid, .detail-audience__grid, .detail-showcase { grid-template-columns: 1fr; gap: 48px; }
   .detail-includes { position: static; }
+  .holiday-cards__grid { grid-template-columns: 1fr 1fr; }
   .related-services__grid { grid-template-columns: 1fr; }
   .related-services__grid > a { height: 330px; }
   .detail-gallery__head { flex-direction: column; align-items: flex-start; gap: 18px; }
@@ -120,6 +132,8 @@
   .service-overview__grid, .gathering-example__grid { grid-template-columns: 1fr; }
   .service-tile { min-height: 560px; }
   .detail-copy-block { grid-template-columns: 1fr; gap: 12px; }
+  .holiday-cards__grid { grid-template-columns: 1fr; }
+  .holiday-card__image span { font-size: 26px; }
   .detail-note { grid-template-columns: 1fr; }
   .detail-gallery__grid { grid-template-columns: 1fr; grid-template-rows: none; }
   .detail-gallery__item--large { grid-column: auto; }

@@ -31,6 +31,18 @@ export const destinationMenu = {
   viewAll: { label: "View All Services", href: "/services" },
 };
 
+export const safarisMenu = {
+  columns: [
+    {
+      heading: "Tours & Safaris",
+      links: [
+        { label: "Kenya Safaris", href: "/safaris/kenya-safaris" },
+        { label: "Africa Safaris", href: "/safaris/africa-safaris" },
+      ],
+    },
+  ],
+};
+
 export const discoverMenu = {
   columns: [
     {

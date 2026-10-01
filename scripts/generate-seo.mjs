@@ -1,12 +1,14 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { journal } from "../src/data.js";
 import { services } from "../src/company-profile.js";
+import { safariCategories } from "../src/safaris-data.js";
 
 const siteUrl = (process.env.VITE_SITE_URL || "https://altheontourandtravels.com").replace(/\/$/, "");
 const staticPaths = ["/", "/about", "/services", "/journal", "/plan-your-journey"];
 const paths = [
   ...staticPaths,
   ...services.map(({ slug }) => `/services/${slug}`),
+  ...safariCategories.flatMap(({ slug, tours }) => [`/safaris/${slug}`, ...tours.map((t) => `/safaris/${slug}/${t.slug}`)]),
   ...journal.map(({ slug }) => `/journal/${slug}`),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
