@@ -66,12 +66,22 @@ export default function ServiceDetail() {
           </div>
         )}
         {service.showcase ? (
-          <div className="wrap detail-showcase">
-            <div className="detail-showcase__head">
-              <span className="eyebrow detail-showcase__eyebrow">{service.showcase.eyebrow}</span>
-              <h2>{service.showcase.heading}</h2>
-            </div>
+          <div className={`wrap detail-showcase${service.showcase.image ? " detail-showcase--image" : ""}`}>
+            {service.showcase.image ? (
+              <img className="detail-showcase__image" src={service.showcase.image} alt={service.showcase.imageAlt || service.name} loading="lazy" />
+            ) : (
+              <div className="detail-showcase__head">
+                <span className="eyebrow detail-showcase__eyebrow">{service.showcase.eyebrow}</span>
+                <h2>{service.showcase.heading}</h2>
+              </div>
+            )}
             <div className="detail-showcase__copy">
+              {service.showcase.image && (
+                <div className="detail-showcase__head">
+                  <span className="eyebrow detail-showcase__eyebrow">{service.showcase.eyebrow}</span>
+                  <h2>{service.showcase.heading}</h2>
+                </div>
+              )}
               <p className="detail-showcase__lead">{service.showcase.lead}</p>
               {service.showcase.notes.map((note) => <p key={note}>{note}</p>)}
             </div>

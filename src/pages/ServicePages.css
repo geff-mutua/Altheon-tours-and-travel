@@ -38,9 +38,11 @@
 .detail-copy-block p { color: var(--parchment-dim); font-size: 14px; }
 
 .detail-showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.detail-showcase--image { align-items: center; }
 .detail-showcase__eyebrow { color: var(--ember); }
 .detail-showcase__eyebrow::before { background: var(--ember); }
 .detail-showcase__head h2 { font-size: var(--font-section-heading); line-height: 1.12; margin-top: 16px; }
+.detail-showcase__image { display: block; width: 100%; height: auto; border-radius: 4px; }
 .detail-showcase__copy { display: flex; flex-direction: column; gap: 22px; }
 .detail-showcase__lead { font-size: var(--font-subtopic-text); line-height: 1.6; color: var(--parchment); }
 .detail-showcase__copy p:not(.detail-showcase__lead) { font-size: 14px; line-height: 1.7; color: var(--parchment-dim); }

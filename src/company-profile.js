@@ -132,6 +132,8 @@ export const services = [
     showcase: {
       eyebrow: "Into the Wild",
       heading: "A safari shaped around how you want to see Africa.",
+      image: "/jungle.jpeg",
+      imageAlt: "Jungle landscape for an African safari",
       lead: "From a short flying safari into the Masai Mara to a multi-country journey across East Africa, every package below can be taken as it is or adjusted to your dates, budget and pace.",
       notes: [
         "We coordinate the parks, lodges and camps, guides, game drives, road transfers and domestic flights so the whole journey runs as one.",
