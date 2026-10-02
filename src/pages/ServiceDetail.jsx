@@ -1,21 +1,24 @@
 import { ArrowLeft, ArrowRight, Check, Users } from "lucide-react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { getService, services } from "../company-profile";
+import { getSafariCategory } from "../safaris-data";
 import "./ServicePages.css";
+import "./Safaris.css";
 
 const RELATED_BY_SLUG = {
-  "hotel-accommodation": ["holiday-leisure", "safari-wildlife", "group-travel"],
-  "safari-wildlife": ["hotel-accommodation", "holiday-leisure", "group-travel"],
+  "hotel-accommodation": ["holiday-leisure", "tours-safaris", "group-travel"],
+  "tours-safaris": ["hotel-accommodation", "holiday-leisure", "group-travel"],
   "travel-desk": ["hotel-accommodation", "corporate", "group-travel"],
   corporate: ["travel-desk", "hotel-accommodation", "group-travel"],
-  "holiday-leisure": ["hotel-accommodation", "safari-wildlife", "travel-desk"],
-  "group-travel": ["travel-desk", "hotel-accommodation", "safari-wildlife"],
+  "holiday-leisure": ["hotel-accommodation", "tours-safaris", "travel-desk"],
+  "group-travel": ["travel-desk", "hotel-accommodation", "tours-safaris"],
 };
 
 export default function ServiceDetail() {
   const { slug } = useParams();
   const service = getService(slug);
   if (!service) return <Navigate to="/services" replace />;
+  const safariCategories = (service.safariCategories || []).map(getSafariCategory).filter(Boolean);
   const related = (RELATED_BY_SLUG[slug] || [])
     .map((relatedSlug) => services.find((item) => item.slug === relatedSlug))
     .filter(Boolean);
@@ -36,6 +39,10 @@ export default function ServiceDetail() {
 
       {service.holidays ? (
         <section className="section holiday-cards">
+          <div className="wrap holidaySec">
+            <h2>Escape, explore, and unwind.</h2>
+            <p>Discover thoughtfully curated holidays, getaways, and unforgettable experiences designed around how you love to travel.</p>
+          </div>
           <div className="wrap holiday-cards__grid">
             {service.holidays.map((card) => (
               <article className="holiday-card" key={card.title}>
@@ -53,6 +60,11 @@ export default function ServiceDetail() {
         </section>
       ) : (
       <section className="section detail-intro">
+        {service.detailDescription && (
+          <div className="wrap detail-intro__description">
+            <p>{service.detailDescriptionLead || "At "}<em>Altheon Tours</em>{service.detailDescriptionLead ? " " : ", "}{service.detailDescription}</p>
+          </div>
+        )}
         {service.showcase ? (
           <div className="wrap detail-showcase">
             <div className="detail-showcase__head">
@@ -66,11 +78,21 @@ export default function ServiceDetail() {
           </div>
         ) : (
           <div className="wrap detail-intro__grid">
+            {service.detailImages ? (
+              <div className="detail-intro__images">
+                {service.detailImages.map((image) => (
+                  <img src={image.src} alt={image.alt} loading="lazy" key={image.src} />
+                ))}
+              </div>
+            ) : service.detailImage ? (
+              <img className="detail-intro__image" src={service.detailImage} alt={`${service.name} travel arrangements`} loading="lazy" />
+            ) : (
             <div className="detail-intro__copy">
               <span className="eyebrow">The Solution</span>
               <h2>{service.outcome}</h2>
               {service.sections.map((section) => <div className="detail-copy-block" key={section.title}><h3>{section.title}</h3><p>{section.text}</p></div>)}
             </div>
+            )}
             <aside className="detail-includes">
               <span>What this service includes</span>
               <ul>{service.services.map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>
@@ -101,6 +123,26 @@ export default function ServiceDetail() {
           </div>
         </section>
       )}
+
+      {safariCategories.map((category) => (
+        <section className="section service-safaris" id={category.slug} key={category.slug}>
+          <div className="wrap">
+            <div className="section-head"><div><span className="eyebrow">{category.name}</span><h2>{category.title}</h2></div></div>
+            <div className="safari-list__grid">
+              {category.tours.map((tour) => (
+                <Link to={`/safaris/${category.slug}/${tour.slug}`} key={tour.slug} className="safari-card">
+                  <img src={tour.image} alt={tour.title} loading="lazy" />
+                  <div className="safari-card__scrim" />
+                  <div className="safari-card__body">
+                    <h3>{tour.title}</h3>
+                    <span className="safari-card__btn">More Information <ArrowRight size={15} strokeWidth={1.5} /></span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
 
       {service.example && (
         <section className="section gathering-example">

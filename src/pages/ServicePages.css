@@ -26,6 +26,12 @@
 .service-promise__list p { display: flex; gap: 14px; padding: 18px 0; border-bottom: 1px solid rgba(13,33,27,.12); color: #3f534b; }
 .service-promise__list svg { flex: 0 0 auto; margin-top: 4px; color: var(--brass); }
 .detail-intro__grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 90px; align-items: start; }
+.detail-intro__image { display: block; width: 100%; height: auto; border-radius: 4px; }
+.detail-intro__images { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.detail-intro__images img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
+.detail-intro__description { margin-bottom: clamp(32px, 5vw, 56px); }
+.detail-intro__description p { max-width: 880px; margin: 0 auto; color: var(--parchment-dim); font-size: clamp(16px, 1.6vw, 18px); line-height: 1.8; text-align: center; }
+.detail-intro__description em { color: var(--ink); }
 .detail-intro__copy > h2 { font-size: var(--font-section-heading); line-height: 1.12; margin: 20px 0 50px; }
 .detail-copy-block { display: grid; grid-template-columns: 210px 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid var(--line); }
 .detail-copy-block h3 { font-size: var(--font-card-heading); }
@@ -72,6 +78,10 @@
   text-shadow: 0 1px 10px rgba(0, 0, 0, .9);
 }
 .holiday-cards { background: #f6f7fb; }
+.holidaySec { display: flex; flex-direction: column; align-items: center; gap: 18px; margin-bottom: clamp(32px, 5vw, 56px); text-align: center; }
+.holidaySec::before { content: ""; width: 48px; height: 2px; background: var(--ember); }
+.holidaySec h2 { margin: 0; color: var(--ink); font-size: var(--font-section-heading); line-height: 1.2; }
+.holidaySec p { max-width: 660px; margin: 0; color: #55605b; font-size: clamp(15px, 1.5vw, 17px); line-height: 1.75; }
 .holiday-cards__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .holiday-card { background: #fff; overflow: hidden; }
 .holiday-card__image { position: relative; aspect-ratio: 616 / 390; overflow: hidden; }
@@ -127,6 +137,7 @@
   .detail-gallery__item--large { grid-column: span 2; grid-row: auto; }
 }
 @media (max-width: 620px) {
+  .detail-intro__images { grid-template-columns: 1fr; }
   .service-hero { min-height: 700px; }
   .service-hero__content { padding-bottom: 54px; }
   .service-overview__grid, .gathering-example__grid { grid-template-columns: 1fr; }

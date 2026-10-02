@@ -74,7 +74,7 @@ function TourPage({ categorySlug, slug }) {
         <img src={category.hero} alt="" />
         <div className="safari-hero__scrim" />
         <div className="wrap safari-hero__tour">
-          <Link to={`/safaris/${category.slug}`} className="service-hero__back"><ArrowLeft size={14} /> {category.title}</Link>
+          <Link to={`/services/tours-safaris#${category.slug}`} className="service-hero__back"><ArrowLeft size={14} /> Tours &amp; Safaris</Link>
           <h1>{tour.title}</h1>
         </div>
       </header>

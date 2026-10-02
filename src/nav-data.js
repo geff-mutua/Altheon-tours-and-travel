@@ -4,7 +4,7 @@ export const destinationMenu = {
       heading: "Stays & Safaris",
       links: [
         { label: "Hotel & Accommodation", href: "/services/hotel-accommodation" },
-        { label: "Safari & Wildlife", href: "/services/safari-wildlife" },
+        { label: "Tours & Safaris", href: "/services/tours-safaris" },
       ],
     },
     {
@@ -29,18 +29,6 @@ export const destinationMenu = {
     href: "/services",
   },
   viewAll: { label: "View All Services", href: "/services" },
-};
-
-export const safarisMenu = {
-  columns: [
-    {
-      heading: "Tours & Safaris",
-      links: [
-        { label: "Kenya Safaris", href: "/safaris/kenya-safaris" },
-        { label: "Africa Safaris", href: "/safaris/africa-safaris" },
-      ],
-    },
-  ],
 };
 
 export const discoverMenu = {

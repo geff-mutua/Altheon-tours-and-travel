@@ -128,7 +128,7 @@ export default function PlanYourJourney() {
                       <select name="service" defaultValue="">
                         <option value="" disabled>Select a service</option>
                         <option>Hotel &amp; Accommodation</option>
-                        <option>Safari &amp; Wildlife</option>
+                        <option>Tours &amp; Safaris</option>
                         <option>Travel Desk</option>
                         <option>Corporate</option>
                         <option>Holiday &amp; Leisure</option>

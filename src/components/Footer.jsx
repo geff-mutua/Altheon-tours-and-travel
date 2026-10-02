@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="footer__col">
           <h4>Solutions</h4>
           <Link to="/services/hotel-accommodation">Hotel &amp; Accommodation</Link>
-          <Link to="/services/safari-wildlife">Safari &amp; Wildlife</Link>
+          <Link to="/services/tours-safaris">Tours &amp; Safaris</Link>
           <Link to="/services/travel-desk">Travel Desk</Link>
           <Link to="/services/corporate">Corporate</Link>
           <Link to="/services/holiday-leisure">Holiday &amp; Leisure</Link>

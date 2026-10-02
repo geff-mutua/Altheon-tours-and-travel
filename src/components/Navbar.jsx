@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail, ChevronDown, ArrowUpRight, Instagram, Facebook, Youtube } from "lucide-react";
-import { destinationMenu, discoverMenu, safarisMenu } from "../nav-data";
+import { destinationMenu, discoverMenu } from "../nav-data";
 import "./Navbar.css";
 
 const MEGA_MENUS = [
   { key: "destinations", label: "SERVICES", data: destinationMenu, kind: "mega" },
-  { key: "safaris", label: "TOURS & SAFARIS", data: safarisMenu, kind: "simple" },
   { key: "discover", label: "DISCOVER", data: discoverMenu, kind: "simple" },
 ];
 

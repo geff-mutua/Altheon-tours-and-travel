@@ -28,7 +28,7 @@ const experiences = [
 const servicesGrid = [
   { icon: "✈", name: "Air Ticketing", text: "Domestic & international flight bookings." },
   { icon: "⌂", name: "Hotel & Accommodation", text: "Hotels, resorts, lodges and guesthouses." },
-  { icon: "⚑", name: "Safari & Wildlife", text: "Curated experiences across Kenya's iconic destinations." },
+  { icon: "⚑", name: "Tours & Safaris", text: "Curated experiences across Kenya's iconic destinations." },
   { icon: "☘", name: "Holiday & Leisure", text: "Beach holidays, honeymoons, family & weekend escapes." },
   { icon: "⊕", name: "International Travel", text: "Planning for Africa & worldwide destinations." },
   { icon: "✉", name: "Corporate Travel", text: "Professional solutions for companies & organizations." },

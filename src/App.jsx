@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppWidget from "./components/WhatsAppWidget";
@@ -48,6 +48,7 @@ export default function App() {
           <Route path="/journal/:slug" element={<JournalPost />} />
           <Route path="/plan-your-journey" element={<PlanYourJourney />} />
           <Route path="/services" element={<ServicesIndex />} />
+          <Route path="/services/safari-wildlife" element={<Navigate to="/services/tours-safaris" replace />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/destinations" element={<Destinations />} />
           <Route path="/about" element={<About />} />
