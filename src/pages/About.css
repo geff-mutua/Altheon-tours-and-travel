@@ -81,9 +81,9 @@
   z-index: 2;
   flex: 1;
   width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: var(--section-spacing) clamp(22px, 5vw, 78px);
+  max-width: none;
+  margin: 0;
+  padding: var(--section-spacing) clamp(22px, 4vw, 64px);
   display: flex;
   flex-direction: column;
   justify-content: center;

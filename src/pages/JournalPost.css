@@ -68,7 +68,7 @@
   margin-top: 22px;
 }
 
-.journal-post__wrap { padding: var(--section-spacing) 0 0; }
+.journal-post__wrap { padding-top: var(--section-spacing); padding-bottom: 0; }
 
 .journal-post__body {
   max-width: 720px;

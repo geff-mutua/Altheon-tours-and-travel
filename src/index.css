@@ -150,9 +150,10 @@ button {
 }
 
 .wrap {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 32px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 clamp(22px, 4vw, 64px);
 }
 
 .eyebrow {

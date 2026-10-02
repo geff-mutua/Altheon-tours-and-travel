@@ -6,7 +6,7 @@
 .safari-hero__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,21,16,.5), rgba(5,21,16,.25) 45%, rgba(5,21,16,.55)); }
 .safari-hero h1 { position: relative; padding: 140px 16px 60px; font-size: clamp(38px, 6vw, 72px); line-height: 1; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
 .safari-hero--tour { min-height: 420px; place-items: end stretch; text-align: left; }
-.safari-hero__tour { position: relative; padding: 150px 0 56px; }
+.safari-hero__tour { position: relative; padding-top: 150px; padding-bottom: 56px; }
 .safari-hero__tour h1 { padding: 0; max-width: 900px; font-size: clamp(32px, 4.5vw, 56px); line-height: 1.05; }
 
 /* Category grid */
